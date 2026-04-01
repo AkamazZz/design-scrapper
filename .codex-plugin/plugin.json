@@ -1,0 +1,35 @@
+{
+  "name": "design-scraper",
+  "version": "0.1.0",
+  "description": "Scrape and organize design inspiration assets from Dribbble, Mobbin, App Store, Behance, Pinterest, and Awwwards with Playwright as the default fetch backend.",
+  "author": {
+    "name": "Tamerlan",
+    "email": ""
+  },
+  "license": "MIT",
+  "keywords": [
+    "design",
+    "scraper",
+    "playwright",
+    "crawl4ai",
+    "inspiration"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Design Scraper",
+    "shortDescription": "Scrape design inspiration assets with Playwright",
+    "longDescription": "Collect design inspiration from supported sources, download original assets when possible, organize them into a local library, and run post-processing for color extraction, dedupe, and preview generation.",
+    "developerName": "Tamerlan",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Scrape these Dribbble links into a local project folder.",
+      "Save inspiration assets from these design URLs.",
+      "Download and organize these design references."
+    ],
+    "brandColor": "#0F172A"
+  }
+}

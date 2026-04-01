@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Scraper"
+  short_description: "Download and organize design inspiration assets"
+  default_prompt: "Use this skill to collect design inspiration assets from supported URLs, prefer original media, organize the output, run the bundled post-processing scripts, and summarize duplicates and preview output."
