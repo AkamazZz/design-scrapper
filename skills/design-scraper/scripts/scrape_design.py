@@ -78,6 +78,31 @@ def run_post_processing(layout: OutputLayout, threshold: int) -> list[dict[str, 
     return results
 
 
+def summarize_run_status(summary: RunSummary) -> int:
+    adapter_failures = [
+        result for result in summary.adapter_results if result.status in {"fetch_failed", "download_failed", "auth_required"}
+    ]
+    post_process_failures = [
+        step for step in summary.post_processing if isinstance(step, dict) and step.get("exit_code", 0) not in (0, None)
+    ]
+
+    if post_process_failures:
+        summary.status = "partial_success"
+        summary.warnings.append("One or more post-processing steps failed.")
+        return 2
+    if adapter_failures and len(adapter_failures) == len(summary.adapter_results):
+        summary.status = "failed"
+        summary.warnings.append("All source scrapes failed.")
+        return 1
+    if adapter_failures:
+        summary.status = "partial_success"
+        summary.warnings.append("Some source scrapes failed.")
+        return 0
+
+    summary.status = "completed"
+    return 0
+
+
 def main() -> int:
     args = parse_args()
     run_id = uuid.uuid4().hex[:12]
@@ -91,6 +116,7 @@ def main() -> int:
         run_id=run_id,
         started_at=utc_now_iso(),
         completed_at=None,
+        status="running",
         output_dir=str(layout.root),
         project=args.project,
         tags=args.tags,
@@ -131,15 +157,16 @@ def main() -> int:
             manifest.record_asset(asset.to_dict())
 
     if not args.skip_post_process:
-        summary.post_processing = run_post_processing(layout, args.dedupe_threshold)
+        summary.post_processing.extend(run_post_processing(layout, args.dedupe_threshold))
 
     summary.completed_at = utc_now_iso()
+    exit_code = summarize_run_status(summary)
     manifest.append_run(summary)
     manifest.save()
     layout.run_report_path.write_text(json.dumps(summary.to_dict(), indent=2) + "\n")
 
     print(json.dumps(summary.to_dict(), indent=2))
-    return 0
+    return exit_code
 
 
 if __name__ == "__main__":

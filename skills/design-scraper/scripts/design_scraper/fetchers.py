@@ -34,13 +34,18 @@ class HttpFetcher:
 class PlaywrightFetcher:
     variant = "playwright"
 
-    def __init__(self, fallback: HttpFetcher | None = None):
+    def __init__(self, fallback: HttpFetcher | None = None, allow_fallback: bool = False):
         self.fallback = fallback or HttpFetcher()
+        self.allow_fallback = allow_fallback
 
     def fetch(self, url: str) -> FetchResult:
         try:
             sync_api = importlib.import_module("playwright.sync_api")
-        except ModuleNotFoundError:
+        except ModuleNotFoundError as exc:
+            if not self.allow_fallback:
+                raise OSError(
+                    "Playwright was requested, but the Python Playwright package is not installed."
+                ) from exc
             fallback_result = self.fallback.fetch(url)
             fallback_result.metadata = {
                 **(fallback_result.metadata or {}),
@@ -54,6 +59,7 @@ class PlaywrightFetcher:
         if sync_playwright is None:
             raise OSError("playwright.sync_api is installed but sync_playwright is unavailable.")
 
+        browser = None
         try:
             with sync_playwright() as playwright:
                 browser = playwright.chromium.launch(headless=True)
@@ -61,8 +67,14 @@ class PlaywrightFetcher:
                 page.goto(url, wait_until="networkidle", timeout=30000)
                 html = page.content()
                 final_url = page.url
-                browser.close()
         except Exception as exc:
+            if browser is not None:
+                try:
+                    browser.close()
+                except Exception:
+                    pass
+            if not self.allow_fallback:
+                raise OSError(f"Playwright fetch failed: {type(exc).__name__}: {exc}") from exc
             fallback_result = self.fallback.fetch(url)
             fallback_result.metadata = {
                 **(fallback_result.metadata or {}),
@@ -71,6 +83,12 @@ class PlaywrightFetcher:
                 "fallback_reason": f"playwright_runtime_error:{type(exc).__name__}",
             }
             return fallback_result
+        finally:
+            if browser is not None:
+                try:
+                    browser.close()
+                except Exception:
+                    pass
 
         return FetchResult(
             url=url,

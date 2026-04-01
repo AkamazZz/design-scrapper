@@ -54,24 +54,28 @@ class RunSummary:
     run_id: str
     started_at: str
     completed_at: str | None
+    status: str
     output_dir: str
     project: str | None
     tags: list[str]
     urls: list[str]
     adapter_results: list[ScrapeResult] = field(default_factory=list)
     post_processing: list[dict[str, Any]] = field(default_factory=list)
+    warnings: list[str] = field(default_factory=list)
 
     def to_dict(self) -> dict[str, Any]:
         return {
             "run_id": self.run_id,
             "started_at": self.started_at,
             "completed_at": self.completed_at,
+            "status": self.status,
             "output_dir": self.output_dir,
             "project": self.project,
             "tags": self.tags,
             "urls": self.urls,
             "adapter_results": [result.to_dict() for result in self.adapter_results],
             "post_processing": self.post_processing,
+            "warnings": self.warnings,
         }
 
 
@@ -84,4 +88,3 @@ class OutputLayout:
     preview_path: Path
     manifest_path: Path
     run_report_path: Path
-
