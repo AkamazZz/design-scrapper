@@ -21,6 +21,8 @@ Common flags:
 --project <name>
 --tag <tag>
 --fetch-variant playwright|crawl4ai|http
+--playwright-user-data-dir <dir>
+--headed
 --skip-post-process
 ```
 
@@ -29,6 +31,12 @@ Default fetch behavior:
 - `playwright` is the default backend
 - `crawl4ai` is the alternate backend
 - `http` is the explicit fallback/debug backend
+
+For auth-gated sites:
+
+- use `--playwright-user-data-dir` to reuse a persistent browser profile
+- use `--headed` for the first manual login
+- keep the profile outside the repo and restrict it to your user
 
 ## Supported Sources
 

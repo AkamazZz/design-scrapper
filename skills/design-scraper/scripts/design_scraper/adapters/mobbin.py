@@ -3,6 +3,7 @@ from __future__ import annotations
 import re
 from urllib.parse import urljoin, urlparse
 
+from ..fetchers import FetchWaitHint
 from ..models import ScrapeResult
 from .base import ScrapeContext, SourceAdapter
 from .common import clean_url, download_assets, extract_meta, extract_script_urls, extract_title, media_kind, safe_stem
@@ -16,8 +17,28 @@ class MobbinAdapter(SourceAdapter):
 
     def scrape(self, url: str, context: ScrapeContext) -> ScrapeResult:
         result = ScrapeResult(source=self.name, url=url, normalized_url=url, status="empty")
+        headed = bool(
+            getattr(getattr(context.fetcher, "launch_options", None), "headed", False)
+        )
+        wait_hint = FetchWaitHint(
+            wait_until="domcontentloaded",
+            timeout_ms=30000,
+            selector_waits=(
+                'img[src*="bytescale"]',
+                'img[src*="app_screens"]',
+            )
+            if headed
+            else (
+                'img[src*="bytescale"]',
+                'img[src*="app_screens"]',
+                '[href*="/login"]',
+                '[href*="/signup"]',
+            ),
+            selector_timeout_ms=4000,
+            extra_delay_ms=1200,
+        )
         try:
-            fetched = context.fetcher.fetch(url)
+            fetched = context.fetcher.fetch(url, wait_hint=wait_hint)
         except OSError as exc:
             result.status = "fetch_failed"
             result.warnings.append(str(exc))
@@ -26,11 +47,28 @@ class MobbinAdapter(SourceAdapter):
         html = fetched.html
         result.metadata.update(fetched.metadata or {})
         result.metadata["fetch_variant"] = fetched.variant
+        if fetched.final_url:
+            result.metadata["final_url"] = fetched.final_url
         result.title = extract_meta(html, "property", "og:title") or extract_title(html)
 
-        if re.search(r"(log in|sign in|sign up)", html, flags=re.IGNORECASE) and "app_screens" not in html:
+        final_url = (fetched.final_url or url).lower()
+        auth_markers = (
+            "/login",
+            "/signup",
+            "auth",
+            "sign in",
+            "log in",
+            "sign up",
+            "continue with google",
+            "continue with apple",
+        )
+        if any(marker in final_url for marker in ("/login", "/signup", "/auth", "redirect_to=")) or (
+            re.search(r"(log in|sign in|sign up|continue with google|continue with apple)", html, flags=re.IGNORECASE)
+            and "app_screens" not in html
+        ):
             result.status = "auth_required"
             result.warnings.append("Mobbin content appears to require an authenticated session.")
+            result.notes.append("Authenticate in the Playwright-backed browser context and rerun.")
             return result
 
         candidates = []

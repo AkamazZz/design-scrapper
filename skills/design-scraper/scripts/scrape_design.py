@@ -32,6 +32,15 @@ def parse_args() -> argparse.Namespace:
         choices=["playwright", "crawl4ai", "http"],
         help="HTML acquisition backend. Playwright is the default; crawl4ai is the alternate backend; http is an explicit fallback/debug option.",
     )
+    parser.add_argument(
+        "--playwright-user-data-dir",
+        help="Optional persistent Playwright profile directory for session reuse. Keep it outside the repo and restricted to your user.",
+    )
+    parser.add_argument(
+        "--headed",
+        action="store_true",
+        help="Launch Playwright in headed mode. Use this for first-time manual login flows.",
+    )
     parser.add_argument("--dedupe-threshold", type=int, default=25, help="Perceptual dedupe threshold")
     parser.add_argument("--skip-post-process", action="store_true", help="Skip colors, dedupe, and preview generation")
     return parser.parse_args()
@@ -123,15 +132,28 @@ def main() -> int:
         urls=args.urls,
     )
     summary.post_processing.append({"requested_fetch_variant": args.fetch_variant})
+    if args.playwright_user_data_dir:
+        summary.post_processing.append(
+            {"playwright_user_data_dir": str(Path(args.playwright_user_data_dir).expanduser())}
+        )
+    if args.headed:
+        summary.post_processing.append({"headed": True})
 
+    fetcher = build_fetcher(
+        args.fetch_variant,
+        playwright_user_data_dir=args.playwright_user_data_dir,
+        playwright_headed=args.headed,
+    )
     context = ScrapeContext(
         layout=layout,
         project=args.project,
         tags=args.tags,
         run_id=run_id,
         downloader=DownloadManager(),
-        fetcher=build_fetcher(args.fetch_variant),
+        fetcher=fetcher,
     )
+    if hasattr(fetcher, "profile_warnings"):
+        summary.warnings.extend(fetcher.profile_warnings())
     registry = build_default_registry()
 
     for original_url in args.urls:
