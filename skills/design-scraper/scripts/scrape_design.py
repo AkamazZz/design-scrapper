@@ -18,31 +18,72 @@ from design_scraper.normalize import detect_source, normalize_url
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
+PLUGIN_ROOT = SCRIPT_DIR.parents[2]
+
+
+def _load_dotenv(path: Path) -> dict[str, str]:
+    if not path.exists():
+        return {}
+
+    values: dict[str, str] = {}
+    for raw_line in path.read_text().splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        if key:
+            values[key] = value
+    return values
+
+
+def _env_bool(value: str | None, default: bool = False) -> bool:
+    if value is None:
+        return default
+    return value.strip().lower() in {"1", "true", "yes", "on"}
 
 
 def parse_args() -> argparse.Namespace:
+    env = _load_dotenv(PLUGIN_ROOT / ".env")
     parser = argparse.ArgumentParser(description="Automated design inspiration scraper.")
     parser.add_argument("urls", nargs="+", help="Design inspiration URLs to process")
-    parser.add_argument("--output-dir", default="~/design_scrapped/initial", help="Root output directory")
+    parser.add_argument(
+        "--output-dir",
+        default=env.get("DEFAULT_OUTPUT_DIR", "~/design_scrapped/initial"),
+        help="Root output directory",
+    )
     parser.add_argument("--project", help="Optional project subdirectory")
     parser.add_argument("--tag", action="append", default=[], dest="tags", help="Optional tag to store in metadata")
     parser.add_argument(
         "--fetch-variant",
-        default="playwright",
+        default=env.get("FETCH_VARIANT", "playwright"),
         choices=["playwright", "crawl4ai", "http"],
         help="HTML acquisition backend. Playwright is the default; crawl4ai is the alternate backend; http is an explicit fallback/debug option.",
     )
     parser.add_argument(
         "--playwright-user-data-dir",
+        default=env.get("PLAYWRIGHT_USER_DATA_DIR"),
         help="Optional persistent Playwright profile directory for session reuse. Keep it outside the repo and restricted to your user.",
     )
     parser.add_argument(
         "--headed",
         action="store_true",
+        default=_env_bool(env.get("PLAYWRIGHT_HEADED"), default=False),
         help="Launch Playwright in headed mode. Use this for first-time manual login flows.",
     )
-    parser.add_argument("--dedupe-threshold", type=int, default=25, help="Perceptual dedupe threshold")
-    parser.add_argument("--skip-post-process", action="store_true", help="Skip colors, dedupe, and preview generation")
+    parser.add_argument(
+        "--dedupe-threshold",
+        type=int,
+        default=int(env.get("DEDUPE_THRESHOLD", "25")),
+        help="Perceptual dedupe threshold",
+    )
+    parser.add_argument(
+        "--skip-post-process",
+        action="store_true",
+        default=_env_bool(env.get("SKIP_POST_PROCESS"), default=False),
+        help="Skip colors, dedupe, and preview generation",
+    )
     return parser.parse_args()
 
 

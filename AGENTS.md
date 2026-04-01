@@ -26,6 +26,17 @@ Common flags:
 --skip-post-process
 ```
 
+Local defaults can be stored in plugin-root `.env`. Supported keys:
+
+```bash
+DEFAULT_OUTPUT_DIR=~/design_scrapped/initial
+FETCH_VARIANT=playwright
+PLAYWRIGHT_USER_DATA_DIR=~/.design-scraper/profile
+PLAYWRIGHT_HEADED=false
+DEDUPE_THRESHOLD=25
+SKIP_POST_PROCESS=false
+```
+
 Default fetch behavior:
 
 - `playwright` is the default backend
