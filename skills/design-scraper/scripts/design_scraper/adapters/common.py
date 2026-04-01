@@ -77,7 +77,7 @@ def extract_absolute_media_urls(html: str, base_url: str) -> list[str]:
 def extract_script_urls(html: str, domain_pattern: str) -> list[str]:
     normalized_html = html.replace("\\/", "/")
     pattern = rf"https?://{domain_pattern}/[^\"'\s<>]+"
-    return sorted(set(re.findall(pattern, normalized_html, flags=re.IGNORECASE)))
+    return sorted({match.group(0) for match in re.finditer(pattern, normalized_html, flags=re.IGNORECASE)})
 
 
 def download_assets(
