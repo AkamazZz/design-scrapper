@@ -1,0 +1,482 @@
+{
+  "08714b4e-9964-4e7c-a717-fdcf682329a2.png": {
+    "dominant_colors": [
+      "#f0f0f0",
+      "#f07010",
+      "#f0c000",
+      "#60c0f0",
+      "#d0d0d0",
+      "#a0a0a0"
+    ],
+    "color_percentages": {
+      "#f0f0f0": 86.8,
+      "#f07010": 1.5,
+      "#f0c000": 1.1,
+      "#60c0f0": 1.0,
+      "#d0d0d0": 0.6,
+      "#a0a0a0": 0.4
+    },
+    "brightness": 241.7,
+    "is_dark_mode": false
+  },
+  "08d372e1-329e-4aca-a8f7-f6d6a4192e89.png": {
+    "dominant_colors": [
+      "#f0f0f0",
+      "#d0d0d0",
+      "#b0b0b0",
+      "#909090",
+      "#404040",
+      "#707070"
+    ],
+    "color_percentages": {
+      "#f0f0f0": 83.1,
+      "#d0d0d0": 1.8,
+      "#b0b0b0": 0.7,
+      "#909090": 0.5,
+      "#404040": 0.5,
+      "#707070": 0.4
+    },
+    "brightness": 229.7,
+    "is_dark_mode": false
+  },
+  "130f30d7-2f3e-468c-a0e9-e67139fb7eef.png": {
+    "dominant_colors": [
+      "#f0f0f0",
+      "#0040e0",
+      "#00a0f0",
+      "#0070f0",
+      "#0010e0",
+      "#9090e0"
+    ],
+    "color_percentages": {
+      "#f0f0f0": 50.5,
+      "#0040e0": 10.4,
+      "#00a0f0": 5.5,
+      "#0070f0": 1.8,
+      "#0010e0": 0.7,
+      "#9090e0": 0.5
+    },
+    "brightness": 186.9,
+    "is_dark_mode": false
+  },
+  "15761d31-c51d-4574-a466-eec65572c41c.png": {
+    "dominant_colors": [
+      "#f0f0f0",
+      "#d0d0d0",
+      "#b0b0b0",
+      "#909090",
+      "#707070",
+      "#101010"
+    ],
+    "color_percentages": {
+      "#f0f0f0": 88.5,
+      "#d0d0d0": 1.7,
+      "#b0b0b0": 0.8,
+      "#909090": 0.6,
+      "#707070": 0.4,
+      "#101010": 0.4
+    },
+    "brightness": 243.1,
+    "is_dark_mode": false
+  },
+  "194f5565-d58f-4392-8ec9-f0f5e5a20093.png": {
+    "dominant_colors": [
+      "#f0f0f0",
+      "#909090",
+      "#101010",
+      "#302030",
+      "#d0d0d0",
+      "#b0b0b0"
+    ],
+    "color_percentages": {
+      "#f0f0f0": 0.3,
+      "#909090": 0.2,
+      "#101010": 0.2,
+      "#302030": 0.1,
+      "#d0d0d0": 0.1,
+      "#b0b0b0": 0.1
+    },
+    "brightness": 4.8,
+    "is_dark_mode": true
+  },
+  "1f32a7b4-362a-4cd1-a060-cde02256173b.png": {
+    "dominant_colors": [
+      "#f0f0f0",
+      "#d0d0d0",
+      "#909090",
+      "#707070",
+      "#b0b0b0",
+      "#a070f0"
+    ],
+    "color_percentages": {
+      "#f0f0f0": 78.5,
+      "#d0d0d0": 0.9,
+      "#909090": 0.3,
+      "#707070": 0.3,
+      "#b0b0b0": 0.3,
+      "#a070f0": 0.2
+    },
+    "brightness": 243.0,
+    "is_dark_mode": false
+  },
+  "238696e4-cfb6-4488-aeca-e4096567805a.png": {
+    "dominant_colors": [
+      "#60b080",
+      "#f0f0f0",
+      "#f08030",
+      "#a0d0b0",
+      "#509060",
+      "#20d060"
+    ],
+    "color_percentages": {
+      "#60b080": 85.2,
+      "#f0f0f0": 5.2,
+      "#f08030": 1.0,
+      "#a0d0b0": 0.8,
+      "#509060": 0.4,
+      "#20d060": 0.1
+    },
+    "brightness": 145.2,
+    "is_dark_mode": false
+  },
+  "23e741c8-c1d2-4793-8d84-9e374ddebc5b.png": {
+    "dominant_colors": [
+      "#f0f0f0",
+      "#f09030",
+      "#1040e0",
+      "#e06080",
+      "#0010d0",
+      "#e06050"
+    ],
+    "color_percentages": {
+      "#f0f0f0": 65.6,
+      "#f09030": 7.6,
+      "#1040e0": 1.9,
+      "#e06080": 0.7,
+      "#0010d0": 0.7,
+      "#e06050": 0.7
+    },
+    "brightness": 217.0,
+    "is_dark_mode": false
+  },
+  "24acb0af-0318-462a-a9d3-ccd6494375c5.png": {
+    "dominant_colors": [
+      "#f0f0f0",
+      "#f08040",
+      "#404050",
+      "#704020",
+      "#c07030",
+      "#d0d0d0"
+    ],
+    "color_percentages": {
+      "#f0f0f0": 59.7,
+      "#f08040": 37.6,
+      "#404050": 0.1,
+      "#704020": 0.1,
+      "#c07030": 0.1,
+      "#d0d0d0": 0.1
+    },
+    "brightness": 211.8,
+    "is_dark_mode": false
+  },
+  "2ab513aa-1ce3-4465-b84a-0651fec118da.png": {
+    "dominant_colors": [
+      "#f0f0f0",
+      "#d0d0d0",
+      "#808080",
+      "#a0a0a0",
+      "#202020",
+      "#606060"
+    ],
+    "color_percentages": {
+      "#f0f0f0": 90.4,
+      "#d0d0d0": 0.7,
+      "#808080": 0.4,
+      "#a0a0a0": 0.3,
+      "#202020": 0.2,
+      "#606060": 0.1
+    },
+    "brightness": 244.4,
+    "is_dark_mode": false
+  },
+  "32436167-d98c-4f1d-a622-cb0ae2258acc.png": {
+    "dominant_colors": [
+      "#f0f0f0",
+      "#f0d000",
+      "#d0d0d0",
+      "#f07010",
+      "#00a050",
+      "#0060f0"
+    ],
+    "color_percentages": {
+      "#f0f0f0": 80.7,
+      "#f0d000": 2.3,
+      "#d0d0d0": 1.4,
+      "#f07010": 0.7,
+      "#00a050": 0.7,
+      "#0060f0": 0.6
+    },
+    "brightness": 235.0,
+    "is_dark_mode": false
+  },
+  "330d46c4-ac42-421f-8023-2e9d0dac79c9.png": {
+    "dominant_colors": [
+      "#f0f0f0",
+      "#b070f0",
+      "#f0b020",
+      "#d0d0d0",
+      "#d0a0f0",
+      "#f0c050"
+    ],
+    "color_percentages": {
+      "#f0f0f0": 61.7,
+      "#b070f0": 1.8,
+      "#f0b020": 1.4,
+      "#d0d0d0": 1.0,
+      "#d0a0f0": 0.6,
+      "#f0c050": 0.6
+    },
+    "brightness": 229.1,
+    "is_dark_mode": false
+  },
+  "36985639-5012-46c9-a9c6-598b67dbba9a.png": {
+    "dominant_colors": [
+      "#f0f0f0",
+      "#5030f0",
+      "#d0d0d0",
+      "#b0b0b0",
+      "#909090",
+      "#8060f0"
+    ],
+    "color_percentages": {
+      "#f0f0f0": 82.6,
+      "#5030f0": 4.5,
+      "#d0d0d0": 0.9,
+      "#b0b0b0": 0.9,
+      "#909090": 0.5,
+      "#8060f0": 0.2
+    },
+    "brightness": 240.1,
+    "is_dark_mode": false
+  },
+  "3ed4ae3d-84fe-4d13-b53c-71e287c2b828.png": {
+    "dominant_colors": [
+      "#f07030",
+      "#f0f0f0",
+      "#303040",
+      "#704020",
+      "#808080",
+      "#d0d0d0"
+    ],
+    "color_percentages": {
+      "#f07030": 49.0,
+      "#f0f0f0": 47.3,
+      "#303040": 0.2,
+      "#704020": 0.1,
+      "#808080": 0.1,
+      "#d0d0d0": 0.1
+    },
+    "brightness": 194.8,
+    "is_dark_mode": false
+  },
+  "44341ccb-b2eb-4ee5-b265-dd1e4f14b357.png": {
+    "dominant_colors": [
+      "#f09040",
+      "#f0e070",
+      "#f0d030",
+      "#303030",
+      "#705030",
+      "#d0b030"
+    ],
+    "color_percentages": {
+      "#f09040": 28.6,
+      "#f0e070": 23.8,
+      "#f0d030": 23.2,
+      "#303030": 1.8,
+      "#705030": 0.2,
+      "#d0b030": 0.2
+    },
+    "brightness": 171.8,
+    "is_dark_mode": false
+  },
+  "44688fec-88dd-46d3-a448-fff9ad5b0cf0.png": {
+    "dominant_colors": [
+      "#f0f0f0",
+      "#b0e090",
+      "#504040",
+      "#d0d0d0",
+      "#302020",
+      "#b0b0b0"
+    ],
+    "color_percentages": {
+      "#f0f0f0": 44.1,
+      "#b0e090": 3.8,
+      "#504040": 1.6,
+      "#d0d0d0": 1.6,
+      "#302020": 1.5,
+      "#b0b0b0": 0.9
+    },
+    "brightness": 185.2,
+    "is_dark_mode": false
+  },
+  "4d8d6595-213c-4fbb-8b64-7f67f6deb483.png": {
+    "dominant_colors": [
+      "#f0f0f0",
+      "#0070f0",
+      "#d0d0d0",
+      "#b0b0b0",
+      "#4060b0",
+      "#909090"
+    ],
+    "color_percentages": {
+      "#f0f0f0": 86.7,
+      "#0070f0": 3.2,
+      "#d0d0d0": 0.8,
+      "#b0b0b0": 0.7,
+      "#4060b0": 0.3,
+      "#909090": 0.3
+    },
+    "brightness": 241.2,
+    "is_dark_mode": false
+  },
+  "55b4c2e2-b769-4164-8b31-afbe5ad02b08.png": {
+    "dominant_colors": [
+      "#101010",
+      "#303030",
+      "#505050",
+      "#e03050",
+      "#707070",
+      "#f0f0f0"
+    ],
+    "color_percentages": {
+      "#101010": 37.1,
+      "#303030": 1.7,
+      "#505050": 0.5,
+      "#e03050": 0.4,
+      "#707070": 0.4,
+      "#f0f0f0": 0.3
+    },
+    "brightness": 25.7,
+    "is_dark_mode": true
+  },
+  "59e630fd-ce0a-4bae-9c08-6480724b3d8e.png": {
+    "dominant_colors": [
+      "#f0f0f0",
+      "#101010",
+      "#606060",
+      "#202050",
+      "#006090",
+      "#d0d0c0"
+    ],
+    "color_percentages": {
+      "#f0f0f0": 28.1,
+      "#101010": 5.6,
+      "#606060": 3.8,
+      "#202050": 3.5,
+      "#006090": 1.7,
+      "#d0d0c0": 1.3
+    },
+    "brightness": 145.6,
+    "is_dark_mode": false
+  },
+  "5e8684ec-348d-4c00-b08c-bd2605a35ef4.png": {
+    "dominant_colors": [
+      "#f0f0f0",
+      "#d0d0d0",
+      "#b0b0b0",
+      "#909090",
+      "#707070",
+      "#101020"
+    ],
+    "color_percentages": {
+      "#f0f0f0": 84.6,
+      "#d0d0d0": 0.8,
+      "#b0b0b0": 0.7,
+      "#909090": 0.3,
+      "#707070": 0.2,
+      "#101020": 0.2
+    },
+    "brightness": 242.3,
+    "is_dark_mode": false
+  },
+  "62e03425-a989-45a8-875d-0b12dafa6dcc.png": {
+    "dominant_colors": [
+      "#a0a0a0",
+      "#101010",
+      "#f0f0f0",
+      "#404040",
+      "#c0c0c0",
+      "#606060"
+    ],
+    "color_percentages": {
+      "#a0a0a0": 8.6,
+      "#101010": 7.4,
+      "#f0f0f0": 3.8,
+      "#404040": 3.4,
+      "#c0c0c0": 2.9,
+      "#606060": 2.4
+    },
+    "brightness": 105.0,
+    "is_dark_mode": true
+  },
+  "6bcfffbe-6913-4991-96ae-8c0cb235ba6b.png": {
+    "dominant_colors": [
+      "#f0f0f0",
+      "#d0d0d0",
+      "#b0b0b0",
+      "#909090",
+      "#707070",
+      "#505050"
+    ],
+    "color_percentages": {
+      "#f0f0f0": 74.6,
+      "#d0d0d0": 0.9,
+      "#b0b0b0": 0.6,
+      "#909090": 0.4,
+      "#707070": 0.3,
+      "#505050": 0.2
+    },
+    "brightness": 244.3,
+    "is_dark_mode": false
+  },
+  "70ebff4a-8442-48b5-8b11-cb6bf109d61d.png": {
+    "dominant_colors": [
+      "#f0f0f0",
+      "#b0b0b0",
+      "#d0d0d0",
+      "#909090",
+      "#707070",
+      "#505050"
+    ],
+    "color_percentages": {
+      "#f0f0f0": 92.1,
+      "#b0b0b0": 2.1,
+      "#d0d0d0": 0.4,
+      "#909090": 0.3,
+      "#707070": 0.1,
+      "#505050": 0.1
+    },
+    "brightness": 249.2,
+    "is_dark_mode": false
+  },
+  "72ddf736-66f6-42b1-a928-5c7eddfe83bd.png": {
+    "dominant_colors": [
+      "#101010",
+      "#303030",
+      "#f0f0f0",
+      "#505050",
+      "#707070",
+      "#909090"
+    ],
+    "color_percentages": {
+      "#101010": 25.5,
+      "#303030": 25.0,
+      "#f0f0f0": 5.2,
+      "#505050": 0.5,
+      "#707070": 0.4,
+      "#909090": 0.3
+    },
+    "brightness": 40.5,
+    "is_dark_mode": true
+  }
+}

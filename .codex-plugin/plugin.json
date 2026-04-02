@@ -1,7 +1,7 @@
 {
   "name": "design-scraper",
   "version": "0.1.0",
-  "description": "Scrape and organize design inspiration assets from Dribbble, Mobbin, App Store, Behance, Pinterest, and Awwwards with Playwright as the default fetch backend.",
+  "description": "Scrape and organize design inspiration assets from Dribbble, Mobbin, App Store, Behance, Pinterest, and Awwwards, then synthesize them into a reusable mobile-first design contract and platform guidance.",
   "author": {
     "name": "Tamerlan",
     "email": ""
@@ -17,8 +17,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Design Scraper",
-    "shortDescription": "Scrape design inspiration assets with Playwright",
-    "longDescription": "Collect design inspiration from supported sources, download original assets when possible, organize them into a local library, and run post-processing for color extraction, dedupe, and preview generation.",
+    "shortDescription": "Scrape inspiration and build design handoff",
+    "longDescription": "Collect design inspiration from supported sources, download original assets when possible, organize them into a local library, run post-processing for color extraction, dedupe, and preview generation, then synthesize the results into a reusable mobile-first design contract and platform guidance.",
     "developerName": "Tamerlan",
     "category": "Productivity",
     "capabilities": [
@@ -28,7 +28,8 @@
     "defaultPrompt": [
       "Scrape these Dribbble links into a local project folder.",
       "Save inspiration assets from these design URLs.",
-      "Download and organize these design references."
+      "Download and organize these design references.",
+      "Turn this scrape into a mobile-first design contract and platform guidance."
     ],
     "brandColor": "#0F172A"
   }

@@ -1,0 +1,1152 @@
+{
+  "config_version": "1.0.0",
+  "proposal_archetypes": {
+    "calm_editorial": {
+      "anti_patterns": [
+        "Avoid multi-column dashboard density on first-run screens.",
+        "Avoid neon gradients or high-contrast noise that breaks the calm tone.",
+        "Avoid multiple equal-weight CTAs in the same viewport."
+      ],
+      "atmosphere": [
+        "quiet",
+        "warm",
+        "assured"
+      ],
+      "body_tone": "Supportive, concise, low-pressure.",
+      "body_weight": "regular",
+      "color_signal": {
+        "accent": "#F27A54",
+        "accent_dark": "#FF9B74",
+        "canvas": "#FBF6EF",
+        "dark_canvas": "#171A1D",
+        "dark_muted_text": "#D0C7BE",
+        "dark_on_accent": "#1F2F37",
+        "dark_surface": "#23272B",
+        "dark_text": "#F7F2EC",
+        "ink": "#1F2F37",
+        "muted_ink": "#5B6971",
+        "soft": "#E9EEE8"
+      },
+      "composition_principles": [
+        "Lead each screen with one emotionally clear focal block.",
+        "Use soft sectional cards instead of hard dashboard grids.",
+        "Keep one dominant CTA in thumb reach and demote secondary actions."
+      ],
+      "decision_summary": [
+        "Translate inspiration into a quieter editorial rhythm instead of copying screenshots literally.",
+        "Use warm contrast and rounded surfaces to keep the product feeling humane rather than clinical."
+      ],
+      "direction_name": "Calm editorial focus",
+      "fallbacks": [
+        "Inter",
+        "System Sans"
+      ],
+      "flow_prompt": "Move from reassurance to one clear next action, then to a lightly structured home experience.",
+      "font_family": "Instrument Sans",
+      "headline_tone": "Generous, direct, emotionally calm.",
+      "headline_weight": "bold",
+      "keywords": [
+        "calm",
+        "quiet",
+        "meditation",
+        "mindful",
+        "habit",
+        "onboarding",
+        "wellness",
+        "headspace",
+        "focus"
+      ],
+      "motifs": [
+        {
+          "applicable_screens": [
+            "onboarding",
+            "home"
+          ],
+          "guidance": "Give the hero module real vertical space and avoid stacking competing data around it.",
+          "id": "hero_breathing_card",
+          "intent": "Anchor a screen around one calm promise and one supporting illustration or surface.",
+          "name": "hero breathing card"
+        },
+        {
+          "applicable_screens": [
+            "onboarding",
+            "detail",
+            "paywall"
+          ],
+          "guidance": "Use one dominant button and collapse alternate actions into text links or later steps.",
+          "id": "single_cta_footer",
+          "intent": "Keep progression obvious with one anchored decision point.",
+          "name": "single CTA footer"
+        },
+        {
+          "applicable_screens": [
+            "home",
+            "progress"
+          ],
+          "guidance": "Prefer concise progress markers and calm surfaces over charts in the first view.",
+          "id": "soft_progress_pill",
+          "intent": "Show status gently without turning the flow into a dashboard.",
+          "name": "soft progress pill"
+        }
+      ],
+      "motion_posture": "Slow and reassuring. Favor fades and restrained scale feedback over springy motion.",
+      "scale_adjustments": {
+        "lg": {
+          "font_size": 22,
+          "line_height": 30
+        },
+        "md": {
+          "font_size": 16,
+          "line_height": 25
+        },
+        "sm": {
+          "font_size": 14,
+          "line_height": 20
+        },
+        "xl": {
+          "font_size": 32,
+          "line_height": 40
+        }
+      },
+      "summary": "Use generous breathing room, warm surfaces, and one deliberate action per step instead of busy utility density.",
+      "surface_treatment": "Warm matte layers with rounded cards and almost no chrome.",
+      "title_weight": "semibold",
+      "tracking": {
+        "lg": -0.2,
+        "md": 0.0,
+        "sm": 0.0,
+        "xl": -0.5
+      },
+      "usage_principles": [
+        "Spend the largest type on emotional promise, not feature density.",
+        "Keep supporting copy compact and conversational.",
+        "Use captions only for reassurance or progress framing."
+      ],
+      "voice_name": "Warm editorial clarity"
+    },
+    "playful_modular": {
+      "anti_patterns": [
+        "Avoid turning every surface into a badge or sticker.",
+        "Avoid chaotic color combinations without a primary accent hierarchy.",
+        "Avoid long paragraphs that slow the sense of progress."
+      ],
+      "atmosphere": [
+        "optimistic",
+        "light",
+        "energetic"
+      ],
+      "body_tone": "Encouraging, compact, easy to scan.",
+      "body_weight": "regular",
+      "color_signal": {
+        "accent": "#FF7A00",
+        "accent_dark": "#FFB36D",
+        "canvas": "#FFF9F1",
+        "dark_canvas": "#1A1723",
+        "dark_muted_text": "#D8D2C8",
+        "dark_on_accent": "#23203A",
+        "dark_surface": "#252131",
+        "dark_text": "#FFF8EF",
+        "ink": "#23203A",
+        "muted_ink": "#5E5A78",
+        "soft": "#FDEEDC"
+      },
+      "composition_principles": [
+        "Break progression into short modular wins.",
+        "Let color accents reward progress, not dominate every surface.",
+        "Use rounded cards and badges to keep the system approachable."
+      ],
+      "decision_summary": [
+        "Keep the system energetic, but control the accent usage so it still scales across product flows."
+      ],
+      "direction_name": "Playful modular momentum",
+      "fallbacks": [
+        "Inter",
+        "System Sans"
+      ],
+      "flow_prompt": "Move quickly from setup to visible early wins, then into modular follow-up actions.",
+      "font_family": "Nunito Sans",
+      "headline_tone": "Rounded, upbeat, action-forward.",
+      "headline_weight": "bold",
+      "keywords": [
+        "game",
+        "play",
+        "reward",
+        "streak",
+        "lesson",
+        "kids",
+        "learn",
+        "challenge",
+        "habitica"
+      ],
+      "motifs": [
+        {
+          "applicable_screens": [
+            "home",
+            "progress"
+          ],
+          "guidance": "Keep rewards compact and connected to an actual next step.",
+          "id": "reward_badge_row",
+          "intent": "Visualize momentum with a short, satisfying cluster of progress badges.",
+          "name": "reward badge row"
+        },
+        {
+          "applicable_screens": [
+            "detail",
+            "home"
+          ],
+          "guidance": "Prefer short card groups over one dense mega-screen.",
+          "id": "modular_task_card",
+          "intent": "Separate goals into approachable chunks.",
+          "name": "modular task card"
+        }
+      ],
+      "motion_posture": "Friendly and brisk. Use motion to reward completion and keep pacing upbeat.",
+      "scale_adjustments": {
+        "lg": {
+          "font_size": 21,
+          "line_height": 29
+        },
+        "md": {
+          "font_size": 16,
+          "line_height": 24
+        },
+        "sm": {
+          "font_size": 14,
+          "line_height": 20
+        },
+        "xl": {
+          "font_size": 31,
+          "line_height": 39
+        }
+      },
+      "summary": "Use bright but controlled accents, modular stacks, and optimistic typography to keep momentum visible.",
+      "surface_treatment": "Rounded modules with visible progress accents and roomy icon moments.",
+      "title_weight": "bold",
+      "tracking": {
+        "lg": -0.1,
+        "md": 0.0,
+        "sm": 0.0,
+        "xl": -0.3
+      },
+      "usage_principles": [
+        "Celebrate progress with short, energetic headlines.",
+        "Keep instructions lightweight so momentum does not stall."
+      ],
+      "voice_name": "Optimistic momentum"
+    },
+    "premium_cinematic": {
+      "anti_patterns": [
+        "Avoid stuffing premium flows with low-trust upsell clutter.",
+        "Avoid loud gradient treatments that reduce perceived quality.",
+        "Avoid overexplaining every step with long utilitarian copy blocks."
+      ],
+      "atmosphere": [
+        "elevated",
+        "restrained",
+        "immersive"
+      ],
+      "body_tone": "Measured, persuasive, editorial.",
+      "body_weight": "regular",
+      "color_signal": {
+        "accent": "#C89B4A",
+        "accent_dark": "#E1BE7A",
+        "canvas": "#FAF7F2",
+        "dark_canvas": "#111111",
+        "dark_muted_text": "#D7D0C7",
+        "dark_on_accent": "#171717",
+        "dark_surface": "#1B1B1B",
+        "dark_text": "#FAF6F0",
+        "ink": "#171717",
+        "muted_ink": "#5C5C5C",
+        "soft": "#EEE7DB"
+      },
+      "composition_principles": [
+        "Use fewer elements with stronger placement decisions.",
+        "Let typography and image framing do more work than container chrome.",
+        "Hold the accent color for moments of conversion or confirmation."
+      ],
+      "decision_summary": [
+        "Premium flows should feel edited. If an element is not pulling weight, remove it rather than shrinking it."
+      ],
+      "direction_name": "Premium cinematic restraint",
+      "fallbacks": [
+        "Inter",
+        "System Sans"
+      ],
+      "flow_prompt": "Move from strong framing into a measured explanation of value, then a confident conversion step.",
+      "font_family": "Sora",
+      "headline_tone": "Confident, sparse, premium.",
+      "headline_weight": "semibold",
+      "keywords": [
+        "premium",
+        "luxury",
+        "fashion",
+        "travel",
+        "editorial",
+        "subscription",
+        "paywall",
+        "membership"
+      ],
+      "motifs": [
+        {
+          "applicable_screens": [
+            "onboarding",
+            "paywall",
+            "detail"
+          ],
+          "guidance": "Keep surrounding modules quiet so the hero can carry the moment.",
+          "id": "immersive_hero",
+          "intent": "Create a premium first impression with one strong message block.",
+          "name": "immersive hero"
+        },
+        {
+          "applicable_screens": [
+            "paywall",
+            "detail"
+          ],
+          "guidance": "Use concise benefit framing and avoid crowded comparison matrices in the first pass.",
+          "id": "curated_offer_card",
+          "intent": "Present value with restraint rather than aggressive promotional noise.",
+          "name": "curated offer card"
+        }
+      ],
+      "motion_posture": "Slow and polished. Avoid bouncy gestures that cheapen the premium feel.",
+      "scale_adjustments": {
+        "lg": {
+          "font_size": 22,
+          "line_height": 30
+        },
+        "md": {
+          "font_size": 15,
+          "line_height": 22
+        },
+        "sm": {
+          "font_size": 13,
+          "line_height": 18
+        },
+        "xl": {
+          "font_size": 34,
+          "line_height": 42
+        }
+      },
+      "summary": "Use controlled contrast, dramatic spacing, and sparse components so premium value feels deliberate.",
+      "surface_treatment": "Minimal chrome, large image or text blocks, and careful negative space.",
+      "title_weight": "semibold",
+      "tracking": {
+        "lg": -0.2,
+        "md": 0.0,
+        "sm": 0.0,
+        "xl": -0.6
+      },
+      "usage_principles": [
+        "Use fewer words and stronger framing.",
+        "Treat captions as premium context, not utility noise."
+      ],
+      "voice_name": "Curated restraint"
+    },
+    "utility_bold": {
+      "anti_patterns": [
+        "Avoid decorative gradients that reduce numerical clarity.",
+        "Avoid ambiguous card groupings with unclear priority.",
+        "Avoid burying the primary action below competing status modules."
+      ],
+      "atmosphere": [
+        "precise",
+        "energetic",
+        "confident"
+      ],
+      "body_tone": "Plainspoken, efficient, low-friction.",
+      "body_weight": "regular",
+      "color_signal": {
+        "accent": "#165DFF",
+        "accent_dark": "#6FA4FF",
+        "canvas": "#F8FAFC",
+        "dark_canvas": "#0B1220",
+        "dark_muted_text": "#CBD5E1",
+        "dark_on_accent": "#101828",
+        "dark_surface": "#111927",
+        "dark_text": "#F8FAFC",
+        "ink": "#101828",
+        "muted_ink": "#475467",
+        "soft": "#E4EAF5"
+      },
+      "composition_principles": [
+        "Front-load the most important number or decision.",
+        "Use crisp card segmentation and direct labels.",
+        "Reserve accent color for the most important action or state."
+      ],
+      "decision_summary": [
+        "Keep the flow efficient and high-contrast so the most important information wins immediately."
+      ],
+      "direction_name": "Bold utility precision",
+      "fallbacks": [
+        "Inter",
+        "System Sans"
+      ],
+      "flow_prompt": "Move from immediate account context into a clear next decision with minimal explanatory drag.",
+      "font_family": "Manrope",
+      "headline_tone": "Direct, numeric, decisive.",
+      "headline_weight": "bold",
+      "keywords": [
+        "finance",
+        "wallet",
+        "cash",
+        "bank",
+        "payments",
+        "analytics",
+        "dashboard",
+        "account",
+        "card"
+      ],
+      "motifs": [
+        {
+          "applicable_screens": [
+            "home",
+            "detail"
+          ],
+          "guidance": "Do not give tertiary metrics equal emphasis with the lead figure.",
+          "id": "metric_stack",
+          "intent": "Present one key number, then supporting details beneath it.",
+          "name": "metric stack"
+        },
+        {
+          "applicable_screens": [
+            "home",
+            "detail",
+            "paywall"
+          ],
+          "guidance": "Use direct labels and avoid secondary style drift.",
+          "id": "action_strip",
+          "intent": "Keep the primary next step visible near the current context.",
+          "name": "action strip"
+        }
+      ],
+      "motion_posture": "Fast and functional. Motion should confirm actions, not decorate them.",
+      "scale_adjustments": {
+        "lg": {
+          "font_size": 20,
+          "line_height": 28
+        },
+        "md": {
+          "font_size": 15,
+          "line_height": 22
+        },
+        "sm": {
+          "font_size": 13,
+          "line_height": 18
+        },
+        "xl": {
+          "font_size": 30,
+          "line_height": 38
+        }
+      },
+      "summary": "Use strong hierarchy, dense but controlled modules, and decisive contrast for fast scanning.",
+      "surface_treatment": "Sharp modular cards with clean edges and tight spacing discipline.",
+      "title_weight": "semibold",
+      "tracking": {
+        "lg": -0.1,
+        "md": 0.0,
+        "sm": 0.0,
+        "xl": -0.3
+      },
+      "usage_principles": [
+        "Use titles to accelerate scanning, not storytelling.",
+        "Keep captions factual and short.",
+        "Limit decorative language around transactional actions."
+      ],
+      "voice_name": "Operational confidence"
+    }
+  },
+  "screen_effect_profiles": {
+    "calm_editorial": {
+      "app_shell": {
+        "cta_posture": "none",
+        "layout_strategy": "quiet_shell",
+        "required_component_kinds": [
+          "card"
+        ]
+      },
+      "default": {
+        "card_usage": "single_soft_anchor",
+        "chrome_density": "low",
+        "cta_posture": "footer_single",
+        "forbidden_component_kinds": [
+          "chip",
+          "list",
+          "divider",
+          "placeholder_block",
+          "badge"
+        ],
+        "layout_strategy": "hero_stack",
+        "required_component_kinds": [
+          "card",
+          "button"
+        ]
+      },
+      "detail": {
+        "layout_strategy": "editorial_detail",
+        "required_component_kinds": [
+          "card",
+          "button"
+        ]
+      },
+      "onboarding": {
+        "required_component_kinds": [
+          "card",
+          "button",
+          "progress"
+        ],
+        "required_text_roles": [
+          "app.display"
+        ]
+      },
+      "paywall": {
+        "layout_strategy": "hero_offer_stack",
+        "required_text_roles": [
+          "app.display",
+          "app.caption"
+        ]
+      },
+      "progress": {
+        "layout_strategy": "gentle_progress_stack",
+        "required_component_kinds": [
+          "progress",
+          "card",
+          "button"
+        ]
+      }
+    },
+    "playful_modular": {
+      "app_shell": {
+        "cta_posture": "none",
+        "layout_strategy": "playful_shell",
+        "required_component_kinds": [
+          "badge",
+          "progress",
+          "card"
+        ]
+      },
+      "default": {
+        "card_usage": "stacked_reward_modules",
+        "chrome_density": "medium",
+        "cta_posture": "progressive_reward",
+        "forbidden_component_kinds": [
+          "chip",
+          "list",
+          "divider",
+          "placeholder_block"
+        ],
+        "layout_strategy": "reward_ladder",
+        "required_component_kinds": [
+          "badge",
+          "progress",
+          "card",
+          "button"
+        ]
+      },
+      "detail": {
+        "layout_strategy": "quest_detail",
+        "required_component_kinds": [
+          "badge",
+          "card",
+          "button"
+        ]
+      },
+      "home": {
+        "layout_strategy": "modular_reward_home",
+        "required_component_kinds": [
+          "badge",
+          "progress",
+          "card",
+          "button"
+        ]
+      },
+      "progress": {
+        "layout_strategy": "momentum_board",
+        "required_component_kinds": [
+          "badge",
+          "progress",
+          "card",
+          "button"
+        ],
+        "required_text_roles": [
+          "app.display"
+        ]
+      }
+    },
+    "premium_cinematic": {
+      "app_shell": {
+        "cta_posture": "none",
+        "forbidden_component_kinds": [
+          "chip",
+          "list",
+          "badge",
+          "progress"
+        ],
+        "layout_strategy": "quiet_frame",
+        "required_component_kinds": [
+          "card"
+        ]
+      },
+      "default": {
+        "card_usage": "hero_led",
+        "chrome_density": "minimal",
+        "cta_posture": "delayed_footer",
+        "forbidden_component_kinds": [
+          "chip",
+          "list",
+          "badge",
+          "progress"
+        ],
+        "layout_strategy": "immersive_editorial",
+        "required_component_kinds": [
+          "placeholder_block",
+          "card",
+          "button"
+        ]
+      },
+      "home": {
+        "cta_posture": "none",
+        "layout_strategy": "curated_home",
+        "required_component_kinds": [
+          "placeholder_block",
+          "card"
+        ]
+      },
+      "onboarding": {
+        "forbidden_component_kinds": [
+          "chip",
+          "list",
+          "badge",
+          "progress"
+        ],
+        "required_component_kinds": [
+          "placeholder_block",
+          "button"
+        ],
+        "required_text_roles": [
+          "app.display"
+        ]
+      }
+    },
+    "utility_bold": {
+      "app_shell": {
+        "cta_posture": "none",
+        "layout_strategy": "command_shell",
+        "required_component_kinds": [
+          "chip",
+          "card",
+          "list"
+        ]
+      },
+      "default": {
+        "card_usage": "segmented_modules",
+        "chrome_density": "high",
+        "cta_posture": "inline_action_strip",
+        "forbidden_component_kinds": [
+          "progress",
+          "badge",
+          "placeholder_block"
+        ],
+        "layout_strategy": "modular_stack",
+        "required_component_kinds": [
+          "chip",
+          "card",
+          "button"
+        ]
+      },
+      "detail": {
+        "layout_strategy": "segmented_detail",
+        "required_component_kinds": [
+          "chip",
+          "card",
+          "button",
+          "list"
+        ]
+      },
+      "home": {
+        "layout_strategy": "metric_first_dashboard",
+        "required_component_kinds": [
+          "chip",
+          "card",
+          "button",
+          "list",
+          "divider"
+        ]
+      },
+      "onboarding": {
+        "chrome_density": "medium",
+        "layout_strategy": "compressed_setup",
+        "required_component_kinds": [
+          "chip",
+          "card",
+          "button"
+        ]
+      },
+      "paywall": {
+        "chrome_density": "medium",
+        "layout_strategy": "offer_stack",
+        "required_component_kinds": [
+          "card",
+          "button",
+          "list"
+        ]
+      }
+    }
+  },
+  "screen_structure_profiles": {
+    "calm_editorial": {
+      "app_shell": {
+        "card_usage": "single_soft_anchor",
+        "cta_posture": "none",
+        "layout_strategy": "quiet_shell",
+        "slots": [
+          "title",
+          "body",
+          "support_card"
+        ]
+      },
+      "default": {
+        "card_usage": "single_soft_anchor",
+        "chrome_density": "low",
+        "cta_posture": "footer_single",
+        "layout_strategy": "hero_stack",
+        "slots": [
+          "title",
+          "body",
+          "hero_card",
+          "progress",
+          "cta"
+        ]
+      },
+      "detail": {
+        "layout_strategy": "editorial_detail",
+        "slots": [
+          "title",
+          "body",
+          "hero_card",
+          "support_card",
+          "cta"
+        ]
+      },
+      "onboarding": {
+        "slots": [
+          "title_display",
+          "body",
+          "hero_card",
+          "progress",
+          "cta"
+        ]
+      },
+      "paywall": {
+        "layout_strategy": "hero_offer_stack",
+        "slots": [
+          "title_display",
+          "body",
+          "hero_card",
+          "caption",
+          "cta"
+        ]
+      },
+      "progress": {
+        "layout_strategy": "gentle_progress_stack",
+        "slots": [
+          "title",
+          "body",
+          "progress",
+          "support_card",
+          "cta"
+        ]
+      }
+    },
+    "playful_modular": {
+      "app_shell": {
+        "cta_posture": "none",
+        "layout_strategy": "playful_shell",
+        "slots": [
+          "title",
+          "badge_row",
+          "progress",
+          "support_card"
+        ]
+      },
+      "default": {
+        "card_usage": "stacked_reward_modules",
+        "chrome_density": "medium",
+        "cta_posture": "progressive_reward",
+        "layout_strategy": "reward_ladder",
+        "slots": [
+          "title",
+          "badge_row",
+          "progress",
+          "hero_card",
+          "cta"
+        ]
+      },
+      "detail": {
+        "layout_strategy": "quest_detail",
+        "slots": [
+          "title",
+          "badge_row",
+          "hero_card",
+          "support_card",
+          "cta"
+        ]
+      },
+      "home": {
+        "layout_strategy": "modular_reward_home",
+        "slots": [
+          "title",
+          "badge_row",
+          "progress",
+          "hero_card",
+          "support_card",
+          "cta"
+        ]
+      },
+      "onboarding": {
+        "slots": [
+          "title_display",
+          "badge_row",
+          "progress",
+          "hero_card",
+          "cta"
+        ]
+      },
+      "paywall": {
+        "layout_strategy": "unlock_ladder",
+        "slots": [
+          "title_display",
+          "badge_row",
+          "hero_card",
+          "cta"
+        ]
+      },
+      "progress": {
+        "layout_strategy": "momentum_board",
+        "slots": [
+          "title_display",
+          "badge_row",
+          "progress",
+          "hero_card",
+          "cta"
+        ]
+      }
+    },
+    "premium_cinematic": {
+      "app_shell": {
+        "cta_posture": "none",
+        "layout_strategy": "quiet_frame",
+        "slots": [
+          "title",
+          "body",
+          "support_card"
+        ]
+      },
+      "default": {
+        "card_usage": "hero_led",
+        "chrome_density": "minimal",
+        "cta_posture": "delayed_footer",
+        "layout_strategy": "immersive_editorial",
+        "slots": [
+          "placeholder",
+          "title",
+          "body",
+          "hero_card",
+          "cta"
+        ]
+      },
+      "detail": {
+        "slots": [
+          "placeholder",
+          "title",
+          "body",
+          "hero_card",
+          "cta"
+        ]
+      },
+      "home": {
+        "cta_posture": "none",
+        "layout_strategy": "curated_home",
+        "slots": [
+          "placeholder",
+          "title",
+          "body",
+          "support_card"
+        ]
+      },
+      "onboarding": {
+        "slots": [
+          "placeholder",
+          "title_display",
+          "body",
+          "cta"
+        ]
+      },
+      "paywall": {
+        "slots": [
+          "placeholder",
+          "title_display",
+          "body",
+          "hero_card",
+          "cta"
+        ]
+      }
+    },
+    "utility_bold": {
+      "app_shell": {
+        "cta_posture": "none",
+        "layout_strategy": "command_shell",
+        "slots": [
+          "title",
+          "status_chip",
+          "support_card",
+          "list"
+        ]
+      },
+      "default": {
+        "card_usage": "segmented_modules",
+        "chrome_density": "high",
+        "cta_posture": "inline_action_strip",
+        "layout_strategy": "modular_stack",
+        "slots": [
+          "title",
+          "status_chip",
+          "hero_card",
+          "cta",
+          "list"
+        ]
+      },
+      "detail": {
+        "layout_strategy": "segmented_detail",
+        "slots": [
+          "title",
+          "status_chip",
+          "cta",
+          "hero_card",
+          "list"
+        ]
+      },
+      "home": {
+        "layout_strategy": "metric_first_dashboard",
+        "slots": [
+          "title",
+          "status_chip",
+          "hero_card",
+          "cta",
+          "divider",
+          "list"
+        ]
+      },
+      "onboarding": {
+        "chrome_density": "medium",
+        "layout_strategy": "compressed_setup",
+        "slots": [
+          "title",
+          "status_chip",
+          "hero_card",
+          "cta"
+        ]
+      },
+      "paywall": {
+        "chrome_density": "medium",
+        "layout_strategy": "offer_stack",
+        "slots": [
+          "title",
+          "hero_card",
+          "list",
+          "cta"
+        ]
+      }
+    }
+  },
+  "signal_clusters": {
+    "dashboard_metric": {
+      "categories": [
+        "dashboard",
+        "analytics",
+        "finance"
+      ],
+      "direction_weights": {
+        "premium_cinematic": 1,
+        "utility_bold": 4
+      },
+      "keywords": [
+        "dashboard",
+        "metric",
+        "metrics",
+        "balance",
+        "wallet",
+        "cash",
+        "bank",
+        "payments",
+        "payment",
+        "analytics",
+        "account",
+        "finance",
+        "card"
+      ],
+      "label": "Dashboard metric utility",
+      "screens": [
+        "home",
+        "detail"
+      ]
+    },
+    "navigation_shell": {
+      "categories": [
+        "navigation",
+        "shell"
+      ],
+      "direction_weights": {
+        "calm_editorial": 1,
+        "playful_modular": 1,
+        "premium_cinematic": 1,
+        "utility_bold": 1
+      },
+      "keywords": [
+        "navigation",
+        "shell",
+        "nav",
+        "tab",
+        "tabs",
+        "hub",
+        "overview",
+        "library",
+        "browse"
+      ],
+      "label": "Navigation shell framing",
+      "screens": [
+        "app_shell",
+        "home"
+      ]
+    },
+    "onboarding_editorial": {
+      "categories": [
+        "onboarding",
+        "wellness",
+        "habit"
+      ],
+      "direction_weights": {
+        "calm_editorial": 4,
+        "premium_cinematic": 1
+      },
+      "keywords": [
+        "calm",
+        "quiet",
+        "mindful",
+        "meditation",
+        "wellness",
+        "focus",
+        "habit",
+        "onboarding",
+        "intro",
+        "welcome"
+      ],
+      "label": "Onboarding editorial calm",
+      "screens": [
+        "onboarding",
+        "detail"
+      ]
+    },
+    "premium_paywall": {
+      "categories": [
+        "paywall",
+        "membership",
+        "premium"
+      ],
+      "direction_weights": {
+        "calm_editorial": 1,
+        "premium_cinematic": 4
+      },
+      "keywords": [
+        "premium",
+        "luxury",
+        "membership",
+        "subscription",
+        "paywall",
+        "travel",
+        "fashion",
+        "offer",
+        "upgrade",
+        "editorial",
+        "curated",
+        "immersive"
+      ],
+      "label": "Premium paywall restraint",
+      "screens": [
+        "paywall",
+        "detail",
+        "onboarding"
+      ]
+    },
+    "reward_progress": {
+      "categories": [
+        "progress",
+        "challenge",
+        "education",
+        "game"
+      ],
+      "direction_weights": {
+        "calm_editorial": 1,
+        "playful_modular": 4
+      },
+      "keywords": [
+        "reward",
+        "rewards",
+        "badge",
+        "badges",
+        "streak",
+        "challenge",
+        "lesson",
+        "progress",
+        "quest",
+        "unlock",
+        "game",
+        "play",
+        "learn",
+        "habitica"
+      ],
+      "label": "Reward progress momentum",
+      "screens": [
+        "progress",
+        "home",
+        "detail"
+      ]
+    }
+  },
+  "validation_policies": {
+    "chrome_density_by_contract_density": {
+      "airy": [
+        "low"
+      ],
+      "compact": [
+        "high",
+        "medium"
+      ],
+      "relaxed": [
+        "medium"
+      ],
+      "spacious": [
+        "minimal"
+      ]
+    },
+    "cta_posture_by_button_variant": {
+      "pill_single_cta": [
+        "footer_single",
+        "none"
+      ],
+      "precision_block": [
+        "inline_action_strip",
+        "none"
+      ],
+      "quiet_prominence": [
+        "delayed_footer",
+        "none"
+      ],
+      "reward_pill": [
+        "none",
+        "progressive_reward"
+      ]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "total_files": 24,
+  "total_hashed": 24,
+  "duplicate_groups": [
+    {
+      "files": [
+        "raw/mobbin/2ab513aa-1ce3-4465-b84a-0651fec118da.png",
+        "raw/mobbin/70ebff4a-8442-48b5-8b11-cb6bf109d61d.png"
+      ],
+      "distance": "similar"
+    }
+  ],
+  "hashes": {
+    "raw/mobbin/08714b4e-9964-4e7c-a717-fdcf682329a2.png": "cfe1fc9fe00ff00ff00fe007f00ff00ff40ff00ff01ff81ffffffffffffff81f",
+    "raw/mobbin/08d372e1-329e-4aca-a8f7-f6d6a4192e89.png": "00000000c7ffffff8fffffffffffffffffffffffefffffffffffffffb9fffc7f",
+    "raw/mobbin/130f30d7-2f3e-468c-a0e9-e67139fb7eef.png": "000000000000ffffffff87ffa7ff8001800180018001fffbffffffffffffffff",
+    "raw/mobbin/15761d31-c51d-4574-a466-eec65572c41c.png": "cfe18fc3ff870fff83ffffff9ff1ffff80c18041ffe38fff8fff80ffbfffb81f",
+    "raw/mobbin/194f5565-d58f-4392-8ec9-f0f5e5a20093.png": "301e0000000000000000000000003ff83ffc00000000000000000000000007e0",
+    "raw/mobbin/1f32a7b4-362a-4cd1-a060-cde02256173b.png": "00214040015f83ff83fffbfffbffffff81ffcdffe30183f783f79fff41f20000",
+    "raw/mobbin/238696e4-cfb6-4488-aeca-e4096567805a.png": "000000000000000007e00ff00e70066003c00ffa000000000000040001800180",
+    "raw/mobbin/23e741c8-c1d2-4793-8d84-9e374ddebc5b.png": "ffffffffffffffffffffffff80018001ffffffffffff8001800180018003ffff",
+    "raw/mobbin/24acb0af-0318-462a-a9d3-ccd6494375c5.png": "fffffffffffffffffffffffffffffffffffffc3f000000000000000000000000",
+    "raw/mobbin/2ab513aa-1ce3-4465-b84a-0651fec118da.png": "dfe1ffff803fc7fff81ff83ffffffffffffffffffffffffffffff0ef8100f801",
+    "raw/mobbin/32436167-d98c-4f1d-a622-cb0ae2258acc.png": "dff1ffff83ff81ffc081af81ffffc0c1c081ff81ffffc081ef81ffffefffec1f",
+    "raw/mobbin/330d46c4-ac42-421f-8023-2e9d0dac79c9.png": "dff1ffff801f0001000180008001c39fffffffffffff803f9fffdfffdfffdfff",
+    "raw/mobbin/36985639-5012-46c9-a9c6-598b67dbba9a.png": "dff1feffffe7ffffff7fff3ff007f807ffbfffffffffffe7a1ffffff80018001",
+    "raw/mobbin/3ed4ae3d-84fe-4d13-b53c-71e287c2b828.png": "ffffffffffffffffffffffffffffffff00000000000000000000000000000000",
+    "raw/mobbin/44341ccb-b2eb-4ee5-b265-dd1e4f14b357.png": "ffff9ff9ffffe00ff43ffffffffffc3ffc3fffffffff00000000000000000000",
+    "raw/mobbin/44688fec-88dd-46d3-a448-fff9ad5b0cf0.png": "00000000000000000000ffffffffffffffffffffffffffffffffffffffffffff",
+    "raw/mobbin/4d8d6595-213c-4fbb-8b64-7f67f6deb483.png": "dff1ffffffff803fffffffffffffffffffffffff80018001fc1ffbfff05ff81f",
+    "raw/mobbin/55b4c2e2-b769-4164-8b31-afbe5ad02b08.png": "000600007e0278007ffe7ffe7ffe7e7e7ffe7efe7e7e7a7e7f46766e1fb81d98",
+    "raw/mobbin/59e630fd-ce0a-4bae-9c08-6480724b3d8e.png": "fffffffff001b7c3b3cb8001800180018211ffffffff80f38001800180018001",
+    "raw/mobbin/5e8684ec-348d-4c00-b08c-bd2605a35ef4.png": "cfe1af9403ff07ff07f9fe7fc877ffffcc63fc3f07f991fbd1fbc1f19999ffff",
+    "raw/mobbin/62e03425-a989-45a8-875d-0b12dafa6dcc.png": "ffffffffffffe3ffe7fff07b4037c0790001000200000000000000007ffe0000",
+    "raw/mobbin/6bcfffbe-6913-4991-96ae-8c0cb235ba6b.png": "cfe13ff900ffffff80018001ffff87fb807fc073c0e3ffcbffff83ff904dbfff",
+    "raw/mobbin/70ebff4a-8442-48b5-8b11-cb6bf109d61d.png": "cfe1fffd003f87fff81ff81fffffffffffffffffffffffffffffffff8001c001",
+    "raw/mobbin/72ddf736-66f6-42b1-a928-5c7eddfe83bd.png": "000000006c0000007ffe701e600000007ffeffff0000fffffffffffe7bc00000"
+  }
+}
