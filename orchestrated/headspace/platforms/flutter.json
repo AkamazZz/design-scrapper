@@ -1,0 +1,36 @@
+{
+  "component_mapping": {
+    "button.primary": "ElevatedButton",
+    "card.default": "Card"
+  },
+  "contract_version": "1.0.0",
+  "gaps": [],
+  "layout_mapping": {
+    "scroll.vertical": "SingleChildScrollView",
+    "stack.horizontal": "Row",
+    "stack.vertical": "Column"
+  },
+  "platform": "flutter",
+  "semantic_mapping": {
+    "action.primary": "ColorScheme.primary",
+    "surface.canvas": "ColorScheme.surface",
+    "surface.card": "ColorScheme.surfaceContainerHighest",
+    "text.primary": "ColorScheme.onSurface",
+    "text.secondary": "ColorScheme.onSurfaceVariant"
+  },
+  "state_mapping": {
+    "disabled.opacity": "Opacity(opacity: disabledOpacity)",
+    "pressed.scale": "GestureDetector + AnimatedScale"
+  },
+  "token_mapping": {
+    "color_class": "Color",
+    "dimension_unit": "dp",
+    "typography_unit": "sp"
+  },
+  "typography_mapping": {
+    "app.body": "Theme.of(context).textTheme.bodyLarge",
+    "app.caption": "Theme.of(context).textTheme.bodySmall",
+    "app.display": "Theme.of(context).textTheme.displayLarge",
+    "app.title": "Theme.of(context).textTheme.titleLarge"
+  }
+}

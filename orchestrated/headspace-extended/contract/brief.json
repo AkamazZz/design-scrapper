@@ -1,0 +1,65 @@
+{
+  "accessibility": {
+    "contrast_target": "WCAG_AA",
+    "dynamic_type_support": "required",
+    "min_touch_target": 44
+  },
+  "brand": {
+    "font_direction": "Preserve reusable cross-platform typography roles.",
+    "tone": "to be defined",
+    "visual_keywords": []
+  },
+  "content_strategy": {
+    "copy_tone": "to be defined",
+    "placeholder_policy": "realistic"
+  },
+  "contract_version": "1.0.0",
+  "deliverables": {
+    "include_dark_theme": true,
+    "include_design_tokens": true,
+    "include_platform_mappings": true
+  },
+  "design_principles": [
+    "mobile-first hierarchy",
+    "one-thumb primary actions",
+    "semantic reuse before platform styling"
+  ],
+  "inspiration_context": {
+    "asset_count": 24,
+    "most_common_colors": [
+      "#f0f0f0",
+      "#d0d0d0",
+      "#b0b0b0",
+      "#909090",
+      "#707070",
+      "#101010",
+      "#505050",
+      "#a0a0a0",
+      "#606060",
+      "#303030"
+    ],
+    "source_count": 2
+  },
+  "localization": {
+    "base_locale": "en-US",
+    "supported_locales": [
+      "en-US"
+    ]
+  },
+  "platform_targets": [
+    "flutter",
+    "swiftui",
+    "compose"
+  ],
+  "project": {
+    "id": "headspace-mobile",
+    "name": "Headspace Mobile",
+    "product_type": "mobile_app",
+    "summary": "Draft mobile product summary."
+  },
+  "technical_constraints": {
+    "implementation_note": "Canonical contract first, platform code second.",
+    "orientation": "portrait",
+    "supports_tablet": false
+  }
+}

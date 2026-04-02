@@ -1,0 +1,144 @@
+{
+  "allowed_component_kinds": [
+    "text",
+    "image",
+    "icon",
+    "button",
+    "text_field",
+    "secure_field",
+    "toggle",
+    "checkbox",
+    "radio",
+    "card",
+    "list",
+    "list_item",
+    "tab_bar",
+    "nav_bar",
+    "bottom_sheet",
+    "dialog",
+    "divider",
+    "chip",
+    "badge",
+    "avatar",
+    "progress",
+    "placeholder_block",
+    "stack",
+    "spacer",
+    "container"
+  ],
+  "contract_version": "1.0.0",
+  "inspiration_summary": {
+    "asset_count": 24,
+    "dark_mode_count": 4,
+    "duplicate_group_count": 1,
+    "excluded_duplicate_asset_count": 0,
+    "fallback_screenshot_count": 0,
+    "included_asset_count": 24,
+    "light_mode_count": 20,
+    "most_common_colors": [
+      "#f0f0f0",
+      "#d0d0d0",
+      "#b0b0b0",
+      "#909090",
+      "#707070",
+      "#101010",
+      "#505050",
+      "#a0a0a0",
+      "#606060",
+      "#303030"
+    ],
+    "source_count": 2,
+    "status_counts": {
+      "downloaded": 24
+    }
+  },
+  "project": "Headspace Mobile",
+  "screen_rules": [
+    "Use semantic roles instead of raw visual values.",
+    "Favor one-thumb primary actions.",
+    "Prefer progressive disclosure over dense dashboards.",
+    "Use inspirations and linked ideas as rationale, not as direct platform markup."
+  ],
+  "screens": [
+    {
+      "components": [
+        {
+          "content": "App shell and navigation",
+          "id": "shell_title",
+          "kind": "text",
+          "semantic_role": "app.title"
+        },
+        {
+          "content": "Use this screen to define global navigation structure and persistent actions.",
+          "id": "shell_body",
+          "kind": "text",
+          "semantic_role": "app.body"
+        },
+        {
+          "content": "Navigation container",
+          "id": "shell_primary_card",
+          "kind": "card",
+          "semantic_role": "card.default"
+        }
+      ],
+      "data_bindings": {},
+      "layout": {
+        "background_role": "surface.canvas",
+        "padding_role": "screen.padding.horizontal",
+        "safe_area": true,
+        "scroll": "vertical"
+      },
+      "purpose": "global_navigation",
+      "route": "/app-shell",
+      "screen_id": "app_shell",
+      "source_idea_ids": [],
+      "source_urls": [],
+      "states": []
+    },
+    {
+      "components": [
+        {
+          "content": "Calm single-action onboarding",
+          "id": "onboarding_title",
+          "kind": "text",
+          "semantic_role": "app.display"
+        },
+        {
+          "content": "Use one dominant CTA and progressive disclosure in onboarding.",
+          "id": "onboarding_body",
+          "kind": "text",
+          "semantic_role": "app.body"
+        },
+        {
+          "content": "Hero moment",
+          "id": "onboarding_card",
+          "kind": "card",
+          "semantic_role": "card.default"
+        },
+        {
+          "id": "onboarding_primary",
+          "kind": "button",
+          "label": "Continue",
+          "semantic_role": "button.primary"
+        }
+      ],
+      "data_bindings": {},
+      "layout": {
+        "background_role": "surface.canvas",
+        "padding_role": "screen.padding.horizontal",
+        "safe_area": true,
+        "scroll": "vertical"
+      },
+      "purpose": "user_introduction",
+      "route": "/onboarding",
+      "screen_id": "onboarding",
+      "source_idea_ids": [
+        "idea-ffb3ab5e"
+      ],
+      "source_urls": [
+        "https://mobbin.com/apps/headspace-ios-28986bf8-81b2-4af0-84df-b5654a8c98f9/f2c7edab-00b5-460c-9663-1cf64517f7db/screens"
+      ],
+      "states": []
+    }
+  ]
+}

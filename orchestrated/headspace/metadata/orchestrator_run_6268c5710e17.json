@@ -1,0 +1,80 @@
+{
+  "actions": [
+    {
+      "action": "created",
+      "path": "orchestrated/headspace/inspirations/index.json"
+    },
+    {
+      "action": "created",
+      "path": "orchestrated/headspace/ideas/index.json"
+    },
+    {
+      "action": "created",
+      "path": "orchestrated/headspace/contract/brief.json"
+    },
+    {
+      "action": "created",
+      "path": "orchestrated/headspace/contract/tokens.json"
+    },
+    {
+      "action": "created",
+      "path": "orchestrated/headspace/contract/typography.json"
+    },
+    {
+      "action": "created",
+      "path": "orchestrated/headspace/contract/semantics.json"
+    },
+    {
+      "action": "created",
+      "path": "orchestrated/headspace/screens/index.json"
+    },
+    {
+      "action": "created",
+      "path": "orchestrated/headspace/realization/plan.json"
+    },
+    {
+      "action": "created",
+      "path": "orchestrated/headspace/platforms/flutter.json"
+    },
+    {
+      "action": "created",
+      "path": "orchestrated/headspace/platforms/swiftui.json"
+    },
+    {
+      "action": "created",
+      "path": "orchestrated/headspace/platforms/compose.json"
+    },
+    {
+      "action": "created",
+      "path": "orchestrated/headspace/preview/summary.md"
+    },
+    {
+      "action": "updated",
+      "path": "orchestrated/headspace/validation/report.json"
+    },
+    {
+      "action": "updated",
+      "path": "orchestrated/headspace/validation/report.md"
+    }
+  ],
+  "completed_at": "2026-04-02T09:21:26+00:00",
+  "output_dir": "orchestrated/headspace",
+  "phases": [
+    "ingest",
+    "ideas",
+    "contract",
+    "platforms",
+    "validate"
+  ],
+  "platform_targets": [
+    "flutter",
+    "swiftui",
+    "compose"
+  ],
+  "project": "Headspace Mobile",
+  "run_id": "6268c5710e17",
+  "scrape_root": "design_scrapped/initial",
+  "started_at": "2026-04-02T09:21:26+00:00",
+  "status": "completed",
+  "validation_status": "passed"
+}

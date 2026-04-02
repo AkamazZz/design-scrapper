@@ -1,0 +1,68 @@
+{
+  "component_roles": {
+    "button.primary": {
+      "background": "action.primary",
+      "corner": "button.corner",
+      "foreground": "text.onAction",
+      "kind": "button",
+      "min_height": "size.touch.min",
+      "text_role": "app.body"
+    },
+    "card.default": {
+      "background": "surface.card",
+      "corner": "card.corner",
+      "elevation": "elevation.1",
+      "kind": "card"
+    }
+  },
+  "contract_version": "1.0.0",
+  "shape_roles": {
+    "button.corner": "radius.lg",
+    "card.corner": "radius.md"
+  },
+  "spacing_roles": {
+    "screen.padding.horizontal": "spacing.16",
+    "section.gap": "spacing.24",
+    "stack.gap.default": "spacing.12"
+  },
+  "state_roles": {
+    "disabled.opacity": "opacity.disabled",
+    "pressed.scale": 0.98
+  },
+  "text_roles": {
+    "app.body": {
+      "style": "body"
+    },
+    "app.caption": {
+      "style": "caption"
+    },
+    "app.display": {
+      "style": "display"
+    },
+    "app.title": {
+      "style": "title"
+    }
+  },
+  "themes": {
+    "dark": {
+      "color_roles": {
+        "action.primary": "#7EA2FF",
+        "surface.canvas": "#0F1115",
+        "surface.card": "#171A21",
+        "text.onAction": "#111827",
+        "text.primary": "#FFFFFF",
+        "text.secondary": "#D1D5DB"
+      }
+    },
+    "light": {
+      "color_roles": {
+        "action.primary": "color.blue.500",
+        "surface.canvas": "color.white",
+        "surface.card": "color.white",
+        "text.onAction": "color.white",
+        "text.primary": "color.gray.900",
+        "text.secondary": "color.gray.700"
+      }
+    }
+  }
+}

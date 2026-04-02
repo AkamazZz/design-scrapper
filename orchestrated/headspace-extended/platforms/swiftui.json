@@ -1,0 +1,67 @@
+{
+  "asset_guidance": {
+    "production_asset_note": "Any custom icons, illustrations, or imagery should be tracked as explicit production assets before implementation.",
+    "source_of_truth": "The canonical contract defines the production design. Inspiration assets are references only."
+  },
+  "component_guidance": {
+    "button.primary": "Keep as the singular primary action treatment on a screen. Maintain clear spacing around it.",
+    "card.default": "Use for modular grouped content. Keep shape, surface, and padding aligned with the contract rather than native defaults alone."
+  },
+  "contract_version": "1.0.0",
+  "design_intent": {
+    "principles": [
+      "Push reusable visual rules into shared styles or modifiers.",
+      "Keep semantic roles clearer than view-level styling tricks."
+    ],
+    "summary": "Implement the validated mobile contract in SwiftUI while keeping typography, hierarchy, and interaction tone aligned with the canonical design."
+  },
+  "gaps": [],
+  "guidance_scope": "used",
+  "implementation_notes": [
+    "Prefer shared modifiers and style wrappers over screen-local styling drift.",
+    "Keep accessibility and dynamic type equal in priority to visual fidelity."
+  ],
+  "interaction_guidance": {
+    "disabled.opacity": "Disabled states should communicate unavailable actions without losing readability.",
+    "pressed.scale": "Pressed feedback should stay subtle and fast. Keep it supportive, not theatrical."
+  },
+  "layout_guidance": {
+    "scroll.vertical": "Assume a vertical mobile flow and keep early content focused."
+  },
+  "platform": "swiftui",
+  "typography_guidance": {
+    "app.body": "Use for primary explanatory copy and content text.",
+    "app.display": "Reserve for hero moments such as onboarding and first-run steps. Keep scaling behavior accessible.",
+    "app.title": "Use for page-level hierarchy and section headlines. Avoid introducing alternate title styles without contract changes."
+  },
+  "usage_summary": {
+    "color_roles": [
+      "action.primary",
+      "surface.canvas",
+      "surface.card",
+      "text.onAction"
+    ],
+    "component_roles": [
+      "button.primary",
+      "card.default"
+    ],
+    "layout_roles": [
+      "scroll.vertical"
+    ],
+    "state_roles": [
+      "disabled.opacity",
+      "pressed.scale"
+    ],
+    "text_roles": [
+      "app.body",
+      "app.display",
+      "app.title"
+    ]
+  },
+  "visual_guidance": {
+    "action.primary": "Use as the dominant interactive accent for the main CTA and action-led components.",
+    "surface.canvas": "Use as the baseline background surface for each screen.",
+    "surface.card": "Use for grouped modules needing elevation or separation without crowding the canvas.",
+    "text.onAction": "Use for text sitting on top of the primary action color and validate contrast in all states."
+  }
+}

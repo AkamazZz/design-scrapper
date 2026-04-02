@@ -1,0 +1,71 @@
+{
+  "contract_version": "1.0.0",
+  "defaults": {
+    "allow_font_scaling": true,
+    "paragraph_spacing": 0,
+    "truncate_strategy": "tail"
+  },
+  "font_families": {
+    "brand_sans": {
+      "fallbacks": [
+        "Inter",
+        "System Sans"
+      ],
+      "primary": "SF Pro"
+    }
+  },
+  "font_weights": {
+    "bold": 700,
+    "medium": 500,
+    "regular": 400,
+    "semibold": 600
+  },
+  "text_styles": {
+    "body": {
+      "allow_font_scaling": true,
+      "family": "brand_sans",
+      "scale": "md",
+      "weight": "regular"
+    },
+    "caption": {
+      "allow_font_scaling": true,
+      "family": "brand_sans",
+      "scale": "sm",
+      "weight": "regular"
+    },
+    "display": {
+      "allow_font_scaling": true,
+      "family": "brand_sans",
+      "scale": "xl",
+      "weight": "bold"
+    },
+    "title": {
+      "allow_font_scaling": true,
+      "family": "brand_sans",
+      "scale": "lg",
+      "weight": "semibold"
+    }
+  },
+  "type_scales": {
+    "lg": {
+      "font_size": 20,
+      "letter_spacing": -0.2,
+      "line_height": 28
+    },
+    "md": {
+      "font_size": 16,
+      "letter_spacing": 0.0,
+      "line_height": 24
+    },
+    "sm": {
+      "font_size": 14,
+      "letter_spacing": 0.0,
+      "line_height": 20
+    },
+    "xl": {
+      "font_size": 28,
+      "letter_spacing": -0.4,
+      "line_height": 36
+    }
+  }
+}

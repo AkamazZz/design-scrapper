@@ -1,0 +1,36 @@
+{
+  "allowed_component_kinds": [
+    "text",
+    "image",
+    "icon",
+    "button",
+    "text_field",
+    "secure_field",
+    "toggle",
+    "checkbox",
+    "radio",
+    "card",
+    "list",
+    "list_item",
+    "tab_bar",
+    "nav_bar",
+    "bottom_sheet",
+    "dialog",
+    "divider",
+    "chip",
+    "badge",
+    "avatar",
+    "progress",
+    "placeholder_block",
+    "stack",
+    "spacer",
+    "container"
+  ],
+  "contract_version": "1.0.0",
+  "screen_rules": [
+    "Use semantic roles instead of raw visual values.",
+    "Favor one-thumb primary actions.",
+    "Prefer progressive disclosure over dense dashboards."
+  ],
+  "screens": []
+}

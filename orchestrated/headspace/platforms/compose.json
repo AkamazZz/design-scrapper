@@ -1,0 +1,36 @@
+{
+  "component_mapping": {
+    "button.primary": "Button",
+    "card.default": "Card"
+  },
+  "contract_version": "1.0.0",
+  "gaps": [],
+  "layout_mapping": {
+    "scroll.vertical": "LazyColumn or Column + verticalScroll",
+    "stack.horizontal": "Row",
+    "stack.vertical": "Column"
+  },
+  "platform": "compose",
+  "semantic_mapping": {
+    "action.primary": "MaterialTheme.colorScheme.primary",
+    "surface.canvas": "MaterialTheme.colorScheme.surface",
+    "surface.card": "MaterialTheme.colorScheme.surfaceContainerHighest",
+    "text.primary": "MaterialTheme.colorScheme.onSurface",
+    "text.secondary": "MaterialTheme.colorScheme.onSurfaceVariant"
+  },
+  "state_mapping": {
+    "disabled.opacity": "Modifier.alpha(disabledOpacity)",
+    "pressed.scale": "Modifier.graphicsLayer"
+  },
+  "token_mapping": {
+    "color_class": "Color",
+    "dimension_unit": "dp",
+    "typography_unit": "sp"
+  },
+  "typography_mapping": {
+    "app.body": "MaterialTheme.typography.bodyLarge",
+    "app.caption": "MaterialTheme.typography.bodySmall",
+    "app.display": "MaterialTheme.typography.displayLarge",
+    "app.title": "MaterialTheme.typography.titleLarge"
+  }
+}

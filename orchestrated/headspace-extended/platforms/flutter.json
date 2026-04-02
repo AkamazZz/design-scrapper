@@ -1,0 +1,67 @@
+{
+  "asset_guidance": {
+    "production_asset_note": "Any illustrations, icons, or marketing artwork should be specified as production assets separately before implementation.",
+    "source_of_truth": "Use the canonical contract plus inspiration notes as the design source of truth. Scraped images are references, not production UI assets."
+  },
+  "component_guidance": {
+    "button.primary": "Implement as the single dominant CTA pattern. Keep tap target at least 44 logical pixels tall and avoid visual competition nearby.",
+    "card.default": "Use as the default grouped content container. Keep padding and corner treatment aligned with the canonical tokens."
+  },
+  "contract_version": "1.0.0",
+  "design_intent": {
+    "principles": [
+      "Centralize typography and colors in a shared theme layer.",
+      "Preserve one dominant CTA per screen unless the contract expands it."
+    ],
+    "summary": "Implement the validated mobile contract on Flutter without reinterpreting hierarchy, spacing rhythm, or accessibility rules."
+  },
+  "gaps": [],
+  "guidance_scope": "used",
+  "implementation_notes": [
+    "Prefer shared theme primitives over per-screen styling decisions.",
+    "Use the screen specs to drive layout, not the inspiration screenshots directly."
+  ],
+  "interaction_guidance": {
+    "disabled.opacity": "Disabled actions should remain legible and clearly unavailable, not simply faded into invisibility.",
+    "pressed.scale": "Pressed feedback should be subtle and fast. Avoid exaggerated motion that fights the calm tone."
+  },
+  "layout_guidance": {
+    "scroll.vertical": "Assume portrait-first vertical scrolling. Keep the primary action reachable without overlong initial layouts."
+  },
+  "platform": "flutter",
+  "typography_guidance": {
+    "app.body": "Use the default long-form or explanatory text style. Preserve readable line-height and contrast.",
+    "app.display": "Use the hero headline style for onboarding or first-run emphasis. Preserve the contract font family, weight, and line-height in the Flutter theme.",
+    "app.title": "Use the primary section or page title style. Keep dynamic type enabled and avoid local overrides."
+  },
+  "usage_summary": {
+    "color_roles": [
+      "action.primary",
+      "surface.canvas",
+      "surface.card",
+      "text.onAction"
+    ],
+    "component_roles": [
+      "button.primary",
+      "card.default"
+    ],
+    "layout_roles": [
+      "scroll.vertical"
+    ],
+    "state_roles": [
+      "disabled.opacity",
+      "pressed.scale"
+    ],
+    "text_roles": [
+      "app.body",
+      "app.display",
+      "app.title"
+    ]
+  },
+  "visual_guidance": {
+    "action.primary": "Use the primary accent color for the main CTA pattern. Keep contrast against text.onAction at AA or better.",
+    "surface.canvas": "Treat this as the screen background surface. Avoid adding extra noise or gradients unless the contract explicitly asks for it.",
+    "surface.card": "Use for elevated content clusters or modules that need separation from the canvas.",
+    "text.onAction": "Reserve for text placed on the primary action surface. It must remain legible in all states."
+  }
+}

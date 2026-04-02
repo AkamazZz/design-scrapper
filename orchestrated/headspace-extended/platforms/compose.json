@@ -1,0 +1,67 @@
+{
+  "asset_guidance": {
+    "production_asset_note": "Introduce production artwork through explicit design assets, not scraped screenshots.",
+    "source_of_truth": "The canonical contract is the source of truth. Inspiration assets remain reference material only."
+  },
+  "component_guidance": {
+    "button.primary": "Treat as the singular main CTA treatment. Keep spacing and prominence consistent.",
+    "card.default": "Use as the standard grouped surface for content clusters or modules."
+  },
+  "contract_version": "1.0.0",
+  "design_intent": {
+    "principles": [
+      "Keep semantic hierarchy visible in the theme and composable structure.",
+      "Use the contract as the source of truth for layout emphasis and interaction tone."
+    ],
+    "summary": "Implement the validated contract in Compose with a shared theme and reusable composable patterns, not per-screen reinvention."
+  },
+  "gaps": [],
+  "guidance_scope": "used",
+  "implementation_notes": [
+    "Prefer theme-backed values and reusable composables over screen-local visual overrides.",
+    "Keep motion and emphasis aligned with the calm, mobile-first design intent."
+  ],
+  "interaction_guidance": {
+    "disabled.opacity": "Disabled actions should remain understandable and not disappear into the background.",
+    "pressed.scale": "Pressed feedback should be present but understated."
+  },
+  "layout_guidance": {
+    "scroll.vertical": "Assume portrait-first vertical scrolling."
+  },
+  "platform": "compose",
+  "typography_guidance": {
+    "app.body": "Use for default content text and explanatory copy.",
+    "app.display": "Reserve for hero or onboarding emphasis. Keep it rare so it retains hierarchy value.",
+    "app.title": "Use for top-level screen and section titles."
+  },
+  "usage_summary": {
+    "color_roles": [
+      "action.primary",
+      "surface.canvas",
+      "surface.card",
+      "text.onAction"
+    ],
+    "component_roles": [
+      "button.primary",
+      "card.default"
+    ],
+    "layout_roles": [
+      "scroll.vertical"
+    ],
+    "state_roles": [
+      "disabled.opacity",
+      "pressed.scale"
+    ],
+    "text_roles": [
+      "app.body",
+      "app.display",
+      "app.title"
+    ]
+  },
+  "visual_guidance": {
+    "action.primary": "Use as the dominant CTA color and keep it visually reserved for the most important action.",
+    "surface.canvas": "Use as the main screen background surface.",
+    "surface.card": "Use for grouped or elevated content modules.",
+    "text.onAction": "Use for text placed on action-colored surfaces with strong contrast."
+  }
+}

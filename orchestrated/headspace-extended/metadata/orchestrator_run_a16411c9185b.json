@@ -1,0 +1,90 @@
+{
+  "actions": [
+    {
+      "action": "created",
+      "path": "orchestrated/headspace-extended/inspirations/index.json"
+    },
+    {
+      "action": "created",
+      "path": "orchestrated/headspace-extended/inspirations/ingest_report.json"
+    },
+    {
+      "action": "skipped",
+      "path": "orchestrated/headspace-extended/ideas/index.json"
+    },
+    {
+      "action": "created",
+      "path": "orchestrated/headspace-extended/contract/brief.json"
+    },
+    {
+      "action": "created",
+      "path": "orchestrated/headspace-extended/contract/tokens.json"
+    },
+    {
+      "action": "created",
+      "path": "orchestrated/headspace-extended/contract/typography.json"
+    },
+    {
+      "action": "created",
+      "path": "orchestrated/headspace-extended/contract/semantics.json"
+    },
+    {
+      "action": "created",
+      "path": "orchestrated/headspace-extended/screens/index.json"
+    },
+    {
+      "action": "created",
+      "path": "orchestrated/headspace-extended/platforms/flutter.json"
+    },
+    {
+      "action": "created",
+      "path": "orchestrated/headspace-extended/platforms/swiftui.json"
+    },
+    {
+      "action": "created",
+      "path": "orchestrated/headspace-extended/platforms/compose.json"
+    },
+    {
+      "action": "created",
+      "path": "orchestrated/headspace-extended/realization/plan.json"
+    },
+    {
+      "action": "created",
+      "path": "orchestrated/headspace-extended/preview/summary.md"
+    },
+    {
+      "action": "created",
+      "path": "orchestrated/headspace-extended/validation/report.json"
+    },
+    {
+      "action": "created",
+      "path": "orchestrated/headspace-extended/validation/report.md"
+    },
+    {
+      "action": "updated",
+      "path": "orchestrated/headspace-extended/realization/plan.json"
+    }
+  ],
+  "completed_at": "2026-04-02T09:36:36+00:00",
+  "output_dir": "orchestrated/headspace-extended",
+  "phases": [
+    "ingest",
+    "ideas",
+    "contract",
+    "screens",
+    "platforms",
+    "plan",
+    "validate"
+  ],
+  "platform_targets": [
+    "flutter",
+    "swiftui",
+    "compose"
+  ],
+  "project": "Headspace Mobile",
+  "run_id": "a16411c9185b",
+  "scrape_root": "design_scrapped/initial",
+  "started_at": "2026-04-02T09:36:36+00:00",
+  "status": "failed",
+  "validation_status": "failed"
+}

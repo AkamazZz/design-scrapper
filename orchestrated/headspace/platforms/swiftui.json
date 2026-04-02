@@ -1,0 +1,36 @@
+{
+  "component_mapping": {
+    "button.primary": "Button",
+    "card.default": "RoundedRectangle + background"
+  },
+  "contract_version": "1.0.0",
+  "gaps": [],
+  "layout_mapping": {
+    "scroll.vertical": "ScrollView",
+    "stack.horizontal": "HStack",
+    "stack.vertical": "VStack"
+  },
+  "platform": "swiftui",
+  "semantic_mapping": {
+    "action.primary": "accentColor",
+    "surface.canvas": "Color(.systemBackground)",
+    "surface.card": "Color(.secondarySystemBackground)",
+    "text.primary": "Color.primary",
+    "text.secondary": "Color.secondary"
+  },
+  "state_mapping": {
+    "disabled.opacity": ".opacity(disabledOpacity)",
+    "pressed.scale": "ButtonStyle or custom ViewModifier"
+  },
+  "token_mapping": {
+    "color_class": "Color",
+    "dimension_unit": "pt",
+    "typography_unit": "pt"
+  },
+  "typography_mapping": {
+    "app.body": ".body",
+    "app.caption": ".caption",
+    "app.display": ".largeTitle",
+    "app.title": ".title2"
+  }
+}

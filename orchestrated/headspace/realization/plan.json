@@ -1,0 +1,61 @@
+{
+  "phases": [
+    {
+      "deliverables": [
+        "inspirations/index.json"
+      ],
+      "id": "intake",
+      "name": "Inspiration intake",
+      "status": "ready"
+    },
+    {
+      "deliverables": [
+        "ideas/index.json"
+      ],
+      "id": "ideas",
+      "name": "Idea capture",
+      "status": "ready"
+    },
+    {
+      "deliverables": [
+        "contract/brief.json",
+        "contract/tokens.json",
+        "contract/typography.json",
+        "contract/semantics.json",
+        "screens/index.json"
+      ],
+      "id": "contract",
+      "name": "Canonical contract",
+      "status": "ready"
+    },
+    {
+      "deliverables": [
+        "platforms/flutter.json",
+        "platforms/swiftui.json",
+        "platforms/compose.json"
+      ],
+      "id": "platforms",
+      "name": "Platform mappings",
+      "status": "ready"
+    },
+    {
+      "deliverables": [
+        "validation/report.json"
+      ],
+      "id": "validation",
+      "name": "Validation and review",
+      "status": "ready"
+    },
+    {
+      "depends_on": [
+        "validation"
+      ],
+      "id": "implementation",
+      "name": "Implementation handoff",
+      "status": "blocked"
+    }
+  ],
+  "principle": "Canonical contract before platform code.",
+  "project": "Headspace Mobile",
+  "status": "draft"
+}

@@ -1,0 +1,87 @@
+{
+  "blockers": [],
+  "next_actions": [
+    "Use the validated contract as the source of truth for Flutter, SwiftUI, and Compose implementation."
+  ],
+  "phases": [
+    {
+      "deliverables": [
+        "inspirations/index.json"
+      ],
+      "evidence": {
+        "asset_count": 24
+      },
+      "id": "intake",
+      "name": "Inspiration intake",
+      "status": "completed"
+    },
+    {
+      "deliverables": [
+        "ideas/index.json"
+      ],
+      "evidence": {
+        "idea_count": 1
+      },
+      "id": "ideas",
+      "name": "Idea capture",
+      "status": "completed"
+    },
+    {
+      "deliverables": [
+        "contract/brief.json",
+        "contract/tokens.json",
+        "contract/typography.json",
+        "contract/semantics.json"
+      ],
+      "evidence": {
+        "platform_targets": [
+          "flutter",
+          "swiftui",
+          "compose"
+        ]
+      },
+      "id": "contract",
+      "name": "Canonical contract",
+      "status": "completed"
+    },
+    {
+      "deliverables": [
+        "screens/index.json"
+      ],
+      "evidence": {
+        "screen_count": 2
+      },
+      "id": "screens",
+      "name": "Screen synthesis",
+      "status": "completed"
+    },
+    {
+      "deliverables": [
+        "platforms/flutter.json",
+        "platforms/swiftui.json",
+        "platforms/compose.json"
+      ],
+      "evidence": {
+        "platform_count": 3
+      },
+      "id": "platforms",
+      "name": "Platform guidance",
+      "status": "completed"
+    },
+    {
+      "deliverables": [
+        "validation/report.json"
+      ],
+      "evidence": {
+        "validation_status": "passed"
+      },
+      "id": "validation",
+      "name": "Validation and review",
+      "status": "passed"
+    }
+  ],
+  "principle": "Canonical contract before platform code.",
+  "project": "Headspace Mobile",
+  "status": "ready_for_implementation",
+  "updated_at": "2026-04-02T09:44:56+00:00"
+}

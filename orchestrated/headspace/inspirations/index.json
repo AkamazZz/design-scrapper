@@ -1,0 +1,265 @@
+{
+  "asset_count": 24,
+  "dark_mode_count": 4,
+  "duplicate_group_count": 1,
+  "files": {
+    "color_summary": "design_scrapped/initial/color_summary.json",
+    "duplicates": "design_scrapped/initial/duplicates.json",
+    "manifest": "design_scrapped/initial/metadata/index.json",
+    "run_report": "design_scrapped/initial/metadata/run_ec5a64568b26.json"
+  },
+  "imported_at": "2026-04-02T09:21:26+00:00",
+  "light_mode_count": 20,
+  "most_common_colors": [
+    "#f0f0f0",
+    "#d0d0d0",
+    "#b0b0b0",
+    "#909090",
+    "#707070",
+    "#101010",
+    "#505050",
+    "#a0a0a0",
+    "#606060",
+    "#303030"
+  ],
+  "scrape_root": "design_scrapped/initial",
+  "source_count": 2,
+  "sources": [
+    {
+      "asset_count": 12,
+      "assets": [
+        {
+          "canonical_url": "https://bytescale.mobbin.com/FW25bBB/image/mobbin.com/prod/content/app_screens/15761d31-c51d-4574-a466-eec65572c41c.png?f=webp&amp%3Bw=1920&amp%3Bq=85&amp%3Bfit=shrink-cover&amp%3Bextend-bottom=120&amp%3Bimage=%2Fmobbin.com%2Fprod%2Fwatermark%2F1.0%2F1d7ff322-e7a3-4382-9705-78397611bfe1&amp%3Bgravity=bottom&amp%3Bv=1.0",
+          "fallback_screenshot": false,
+          "file_size": 65126,
+          "kind": "image",
+          "local_path": "design_scrapped/initial/raw/mobbin/15761d31-c51d-4574-a466-eec65572c41c.png",
+          "mime_type": "image/webp",
+          "warnings": []
+        },
+        {
+          "canonical_url": "https://bytescale.mobbin.com/FW25bBB/image/mobbin.com/prod/content/app_screens/194f5565-d58f-4392-8ec9-f0f5e5a20093.png?f=webp&amp%3Bw=1920&amp%3Bq=85&amp%3Bfit=shrink-cover&amp%3Bextend-bottom=120&amp%3Bimage=%2Fmobbin.com%2Fprod%2Fwatermark%2F1.0%2F80ebad0f-17a4-47e3-9d85-07ea25969067&amp%3Bgravity=bottom&amp%3Bv=1.0",
+          "fallback_screenshot": false,
+          "file_size": 13376,
+          "kind": "image",
+          "local_path": "design_scrapped/initial/raw/mobbin/194f5565-d58f-4392-8ec9-f0f5e5a20093.png",
+          "mime_type": "image/webp",
+          "warnings": []
+        },
+        {
+          "canonical_url": "https://bytescale.mobbin.com/FW25bBB/image/mobbin.com/prod/content/app_screens/1f32a7b4-362a-4cd1-a060-cde02256173b.png?f=webp&amp%3Bw=1920&amp%3Bq=85&amp%3Bfit=shrink-cover&amp%3Bextend-bottom=120&amp%3Bimage=%2Fmobbin.com%2Fprod%2Fwatermark%2F1.0%2F82a32fee-bf5f-4c39-b4b8-0e002de68d4c&amp%3Bgravity=bottom&amp%3Bv=1.0",
+          "fallback_screenshot": false,
+          "file_size": 48052,
+          "kind": "image",
+          "local_path": "design_scrapped/initial/raw/mobbin/1f32a7b4-362a-4cd1-a060-cde02256173b.png",
+          "mime_type": "image/webp",
+          "warnings": []
+        },
+        {
+          "canonical_url": "https://bytescale.mobbin.com/FW25bBB/image/mobbin.com/prod/content/app_screens/2ab513aa-1ce3-4465-b84a-0651fec118da.png?f=webp&amp%3Bw=15&amp%3Bq=85&amp%3Bfit=shrink-cover",
+          "fallback_screenshot": false,
+          "file_size": 34530,
+          "kind": "image",
+          "local_path": "design_scrapped/initial/raw/mobbin/2ab513aa-1ce3-4465-b84a-0651fec118da.png",
+          "mime_type": "image/webp",
+          "warnings": []
+        },
+        {
+          "canonical_url": "https://bytescale.mobbin.com/FW25bBB/image/mobbin.com/prod/content/app_screens/330d46c4-ac42-421f-8023-2e9d0dac79c9.png?f=webp&amp%3Bw=1920&amp%3Bq=85&amp%3Bfit=shrink-cover&amp%3Bextend-bottom=120&amp%3Bimage=%2Fmobbin.com%2Fprod%2Fwatermark%2F1.0%2F23c06c82-2da7-4f30-9458-3e7c7e95b179&amp%3Bgravity=bottom&amp%3Bv=1.0",
+          "fallback_screenshot": false,
+          "file_size": 54694,
+          "kind": "image",
+          "local_path": "design_scrapped/initial/raw/mobbin/330d46c4-ac42-421f-8023-2e9d0dac79c9.png",
+          "mime_type": "image/webp",
+          "warnings": []
+        },
+        {
+          "canonical_url": "https://bytescale.mobbin.com/FW25bBB/image/mobbin.com/prod/content/app_screens/36985639-5012-46c9-a9c6-598b67dbba9a.png?f=webp&amp%3Bw=1920&amp%3Bq=85&amp%3Bfit=shrink-cover&amp%3Bextend-bottom=120&amp%3Bimage=%2Fmobbin.com%2Fprod%2Fwatermark%2F1.0%2Fac3c60d3-8785-4184-bfde-e1c7e5659e2b&amp%3Bgravity=bottom&amp%3Bv=1.0",
+          "fallback_screenshot": false,
+          "file_size": 70792,
+          "kind": "image",
+          "local_path": "design_scrapped/initial/raw/mobbin/36985639-5012-46c9-a9c6-598b67dbba9a.png",
+          "mime_type": "image/webp",
+          "warnings": []
+        },
+        {
+          "canonical_url": "https://bytescale.mobbin.com/FW25bBB/image/mobbin.com/prod/content/app_screens/44688fec-88dd-46d3-a448-fff9ad5b0cf0.png?f=webp&amp%3Bw=1920&amp%3Bq=85&amp%3Bfit=shrink-cover&amp%3Bextend-bottom=120&amp%3Bimage=%2Fmobbin.com%2Fprod%2Fwatermark%2F1.0%2Fa2c998ef-622b-4788-a14e-b6d7201aaf75&amp%3Bgravity=bottom&amp%3Bv=1.0",
+          "fallback_screenshot": false,
+          "file_size": 117760,
+          "kind": "image",
+          "local_path": "design_scrapped/initial/raw/mobbin/44688fec-88dd-46d3-a448-fff9ad5b0cf0.png",
+          "mime_type": "image/webp",
+          "warnings": []
+        },
+        {
+          "canonical_url": "https://bytescale.mobbin.com/FW25bBB/image/mobbin.com/prod/content/app_screens/59e630fd-ce0a-4bae-9c08-6480724b3d8e.png?f=webp&amp%3Bw=1920&amp%3Bq=85&amp%3Bfit=shrink-cover&amp%3Bextend-bottom=120&amp%3Bimage=%2Fmobbin.com%2Fprod%2Fwatermark%2F1.0%2F5b49ae4b-f03b-4e28-b662-eb5cf9cc83f6&amp%3Bgravity=bottom&amp%3Bv=1.0",
+          "fallback_screenshot": false,
+          "file_size": 105366,
+          "kind": "image",
+          "local_path": "design_scrapped/initial/raw/mobbin/59e630fd-ce0a-4bae-9c08-6480724b3d8e.png",
+          "mime_type": "image/webp",
+          "warnings": []
+        },
+        {
+          "canonical_url": "https://bytescale.mobbin.com/FW25bBB/image/mobbin.com/prod/content/app_screens/62e03425-a989-45a8-875d-0b12dafa6dcc.png?f=webp&amp%3Bw=1920&amp%3Bq=85&amp%3Bfit=shrink-cover&amp%3Bextend-bottom=120&amp%3Bimage=%2Fmobbin.com%2Fprod%2Fwatermark%2F1.0%2Fe34435ec-db01-4478-b848-66e86f2eca84&amp%3Bgravity=bottom&amp%3Bv=1.0",
+          "fallback_screenshot": false,
+          "file_size": 127940,
+          "kind": "image",
+          "local_path": "design_scrapped/initial/raw/mobbin/62e03425-a989-45a8-875d-0b12dafa6dcc.png",
+          "mime_type": "image/webp",
+          "warnings": []
+        },
+        {
+          "canonical_url": "https://bytescale.mobbin.com/FW25bBB/image/mobbin.com/prod/content/app_screens/6bcfffbe-6913-4991-96ae-8c0cb235ba6b.png?f=webp&amp%3Bw=1920&amp%3Bq=85&amp%3Bfit=shrink-cover&amp%3Bextend-bottom=120&amp%3Bimage=%2Fmobbin.com%2Fprod%2Fwatermark%2F1.0%2Fbad0a329-b955-4b23-9540-eac7fff49707&amp%3Bgravity=bottom&amp%3Bv=1.0",
+          "fallback_screenshot": false,
+          "file_size": 68456,
+          "kind": "image",
+          "local_path": "design_scrapped/initial/raw/mobbin/6bcfffbe-6913-4991-96ae-8c0cb235ba6b.png",
+          "mime_type": "image/webp",
+          "warnings": []
+        },
+        {
+          "canonical_url": "https://bytescale.mobbin.com/FW25bBB/image/mobbin.com/prod/content/app_screens/70ebff4a-8442-48b5-8b11-cb6bf109d61d.png?f=webp&amp%3Bw=15&amp%3Bq=85&amp%3Bfit=shrink-cover",
+          "fallback_screenshot": false,
+          "file_size": 21914,
+          "kind": "image",
+          "local_path": "design_scrapped/initial/raw/mobbin/70ebff4a-8442-48b5-8b11-cb6bf109d61d.png",
+          "mime_type": "image/webp",
+          "warnings": []
+        },
+        {
+          "canonical_url": "https://bytescale.mobbin.com/FW25bBB/image/mobbin.com/prod/content/app_screens/72ddf736-66f6-42b1-a928-5c7eddfe83bd.png?f=webp&amp%3Bw=1920&amp%3Bq=85&amp%3Bfit=shrink-cover&amp%3Bextend-bottom=120&amp%3Bimage=%2Fmobbin.com%2Fprod%2Fwatermark%2F1.0%2Ff84c000a-2803-4336-9d46-cea6b8957e5d&amp%3Bgravity=bottom&amp%3Bv=1.0",
+          "fallback_screenshot": false,
+          "file_size": 42914,
+          "kind": "image",
+          "local_path": "design_scrapped/initial/raw/mobbin/72ddf736-66f6-42b1-a928-5c7eddfe83bd.png",
+          "mime_type": "image/webp",
+          "warnings": []
+        }
+      ],
+      "fallback_screenshot_count": 0,
+      "source": "mobbin",
+      "source_url": "https://mobbin.com/apps/cash-app-ios-6fc9a5b8-91ee-47dd-976d-9784a1975e1a/fed5f550-de22-4c8f-98d3-72b7dcf28e2e/screens",
+      "status": "downloaded",
+      "title": "Cash App iOS | Mobbin \u2014 UI & UX design inspiration for mobile & web apps"
+    },
+    {
+      "asset_count": 12,
+      "assets": [
+        {
+          "canonical_url": "https://bytescale.mobbin.com/FW25bBB/image/mobbin.com/prod/content/app_screens/08714b4e-9964-4e7c-a717-fdcf682329a2.png?f=webp&amp%3Bw=15&amp%3Bq=85&amp%3Bfit=shrink-cover",
+          "fallback_screenshot": false,
+          "file_size": 48556,
+          "kind": "image",
+          "local_path": "design_scrapped/initial/raw/mobbin/08714b4e-9964-4e7c-a717-fdcf682329a2.png",
+          "mime_type": "image/webp",
+          "warnings": []
+        },
+        {
+          "canonical_url": "https://bytescale.mobbin.com/FW25bBB/image/mobbin.com/prod/content/app_screens/08d372e1-329e-4aca-a8f7-f6d6a4192e89.png?f=webp&amp%3Bw=1920&amp%3Bq=85&amp%3Bfit=shrink-cover&amp%3Bextend-bottom=120&amp%3Bimage=%2Fmobbin.com%2Fprod%2Fwatermark%2F1.0%2F92694e39-3780-45bd-8208-fc3376f709fa&amp%3Bgravity=bottom&amp%3Bv=1.0",
+          "fallback_screenshot": false,
+          "file_size": 64334,
+          "kind": "image",
+          "local_path": "design_scrapped/initial/raw/mobbin/08d372e1-329e-4aca-a8f7-f6d6a4192e89.png",
+          "mime_type": "image/webp",
+          "warnings": []
+        },
+        {
+          "canonical_url": "https://bytescale.mobbin.com/FW25bBB/image/mobbin.com/prod/content/app_screens/130f30d7-2f3e-468c-a0e9-e67139fb7eef.png?f=webp&amp%3Bw=1920&amp%3Bq=85&amp%3Bfit=shrink-cover&amp%3Bextend-bottom=120&amp%3Bimage=%2Fmobbin.com%2Fprod%2Fwatermark%2F1.0%2F99e475d3-6e41-4266-aad1-8a2f1e781f2d&amp%3Bgravity=bottom&amp%3Bv=1.0",
+          "fallback_screenshot": false,
+          "file_size": 72634,
+          "kind": "image",
+          "local_path": "design_scrapped/initial/raw/mobbin/130f30d7-2f3e-468c-a0e9-e67139fb7eef.png",
+          "mime_type": "image/webp",
+          "warnings": []
+        },
+        {
+          "canonical_url": "https://bytescale.mobbin.com/FW25bBB/image/mobbin.com/prod/content/app_screens/238696e4-cfb6-4488-aeca-e4096567805a.png?f=webp&amp%3Bw=1920&amp%3Bq=85&amp%3Bfit=shrink-cover&amp%3Bextend-bottom=120&amp%3Bimage=%2Fmobbin.com%2Fprod%2Fwatermark%2F1.0%2F98737a69-0d13-4427-a7bb-6ec2e945a8e1&amp%3Bgravity=bottom&amp%3Bv=1.0",
+          "fallback_screenshot": false,
+          "file_size": 37932,
+          "kind": "image",
+          "local_path": "design_scrapped/initial/raw/mobbin/238696e4-cfb6-4488-aeca-e4096567805a.png",
+          "mime_type": "image/webp",
+          "warnings": []
+        },
+        {
+          "canonical_url": "https://bytescale.mobbin.com/FW25bBB/image/mobbin.com/prod/content/app_screens/23e741c8-c1d2-4793-8d84-9e374ddebc5b.png?f=webp&amp%3Bw=1920&amp%3Bq=85&amp%3Bfit=shrink-cover&amp%3Bextend-bottom=120&amp%3Bimage=%2Fmobbin.com%2Fprod%2Fwatermark%2F1.0%2F9fb74046-d5b5-4af9-9204-78cacdd67661&amp%3Bgravity=bottom&amp%3Bv=1.0",
+          "fallback_screenshot": false,
+          "file_size": 84544,
+          "kind": "image",
+          "local_path": "design_scrapped/initial/raw/mobbin/23e741c8-c1d2-4793-8d84-9e374ddebc5b.png",
+          "mime_type": "image/webp",
+          "warnings": []
+        },
+        {
+          "canonical_url": "https://bytescale.mobbin.com/FW25bBB/image/mobbin.com/prod/content/app_screens/24acb0af-0318-462a-a9d3-ccd6494375c5.png?f=webp&amp%3Bw=15&amp%3Bq=85&amp%3Bfit=shrink-cover",
+          "fallback_screenshot": false,
+          "file_size": 14452,
+          "kind": "image",
+          "local_path": "design_scrapped/initial/raw/mobbin/24acb0af-0318-462a-a9d3-ccd6494375c5.png",
+          "mime_type": "image/webp",
+          "warnings": []
+        },
+        {
+          "canonical_url": "https://bytescale.mobbin.com/FW25bBB/image/mobbin.com/prod/content/app_screens/32436167-d98c-4f1d-a622-cb0ae2258acc.png?f=webp&amp%3Bw=1920&amp%3Bq=85&amp%3Bfit=shrink-cover&amp%3Bextend-bottom=120&amp%3Bimage=%2Fmobbin.com%2Fprod%2Fwatermark%2F1.0%2F1cba404f-413c-4a8b-be36-d791e9ca4fed&amp%3Bgravity=bottom&amp%3Bv=1.0",
+          "fallback_screenshot": false,
+          "file_size": 62124,
+          "kind": "image",
+          "local_path": "design_scrapped/initial/raw/mobbin/32436167-d98c-4f1d-a622-cb0ae2258acc.png",
+          "mime_type": "image/webp",
+          "warnings": []
+        },
+        {
+          "canonical_url": "https://bytescale.mobbin.com/FW25bBB/image/mobbin.com/prod/content/app_screens/3ed4ae3d-84fe-4d13-b53c-71e287c2b828.png?f=webp&amp%3Bw=15&amp%3Bq=85&amp%3Bfit=shrink-cover",
+          "fallback_screenshot": false,
+          "file_size": 16030,
+          "kind": "image",
+          "local_path": "design_scrapped/initial/raw/mobbin/3ed4ae3d-84fe-4d13-b53c-71e287c2b828.png",
+          "mime_type": "image/webp",
+          "warnings": []
+        },
+        {
+          "canonical_url": "https://bytescale.mobbin.com/FW25bBB/image/mobbin.com/prod/content/app_screens/44341ccb-b2eb-4ee5-b265-dd1e4f14b357.png?f=webp&amp%3Bw=1920&amp%3Bq=85&amp%3Bfit=shrink-cover&amp%3Bextend-bottom=120&amp%3Bimage=%2Fmobbin.com%2Fprod%2Fwatermark%2F1.0%2F19144eaf-4d48-472c-b732-f6fa87ecefb7&amp%3Bgravity=bottom&amp%3Bv=1.0",
+          "fallback_screenshot": false,
+          "file_size": 28914,
+          "kind": "image",
+          "local_path": "design_scrapped/initial/raw/mobbin/44341ccb-b2eb-4ee5-b265-dd1e4f14b357.png",
+          "mime_type": "image/webp",
+          "warnings": []
+        },
+        {
+          "canonical_url": "https://bytescale.mobbin.com/FW25bBB/image/mobbin.com/prod/content/app_screens/4d8d6595-213c-4fbb-8b64-7f67f6deb483.png?f=webp&amp%3Bw=15&amp%3Bq=85&amp%3Bfit=shrink-cover",
+          "fallback_screenshot": false,
+          "file_size": 52940,
+          "kind": "image",
+          "local_path": "design_scrapped/initial/raw/mobbin/4d8d6595-213c-4fbb-8b64-7f67f6deb483.png",
+          "mime_type": "image/webp",
+          "warnings": []
+        },
+        {
+          "canonical_url": "https://bytescale.mobbin.com/FW25bBB/image/mobbin.com/prod/content/app_screens/55b4c2e2-b769-4164-8b31-afbe5ad02b08.png?f=webp&amp%3Bw=1920&amp%3Bq=85&amp%3Bfit=shrink-cover&amp%3Bextend-bottom=120&amp%3Bimage=%2Fmobbin.com%2Fprod%2Fwatermark%2F1.0%2F2745a5a7-c443-46cf-80bb-a3e7b72ff8f7&amp%3Bgravity=bottom&amp%3Bv=1.0",
+          "fallback_screenshot": false,
+          "file_size": 63186,
+          "kind": "image",
+          "local_path": "design_scrapped/initial/raw/mobbin/55b4c2e2-b769-4164-8b31-afbe5ad02b08.png",
+          "mime_type": "image/webp",
+          "warnings": []
+        },
+        {
+          "canonical_url": "https://bytescale.mobbin.com/FW25bBB/image/mobbin.com/prod/content/app_screens/5e8684ec-348d-4c00-b08c-bd2605a35ef4.png?f=webp&amp%3Bw=1920&amp%3Bq=85&amp%3Bfit=shrink-cover&amp%3Bextend-bottom=120&amp%3Bimage=%2Fmobbin.com%2Fprod%2Fwatermark%2F1.0%2F3f98c39d-fd18-4cc8-b3b4-6b85582dffc5&amp%3Bgravity=bottom&amp%3Bv=1.0",
+          "fallback_screenshot": false,
+          "file_size": 55008,
+          "kind": "image",
+          "local_path": "design_scrapped/initial/raw/mobbin/5e8684ec-348d-4c00-b08c-bd2605a35ef4.png",
+          "mime_type": "image/webp",
+          "warnings": []
+        }
+      ],
+      "fallback_screenshot_count": 0,
+      "source": "mobbin",
+      "source_url": "https://mobbin.com/apps/headspace-ios-28986bf8-81b2-4af0-84df-b5654a8c98f9/f2c7edab-00b5-460c-9663-1cf64517f7db/screens",
+      "status": "downloaded",
+      "title": "Headspace iOS | Mobbin \u2014 UI & UX design inspiration for mobile & web apps"
+    }
+  ]
+}

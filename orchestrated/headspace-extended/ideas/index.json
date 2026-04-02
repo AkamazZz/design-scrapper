@@ -1,0 +1,33 @@
+{
+  "idea_fields": [
+    "idea_id",
+    "title",
+    "summary",
+    "rationale",
+    "pattern_category",
+    "source_urls",
+    "source_assets",
+    "target_screens",
+    "status",
+    "created_at"
+  ],
+  "ideas": [
+    {
+      "created_at": "2026-04-02T09:36:36+00:00",
+      "idea_id": "idea-ffb3ab5e",
+      "pattern_category": "onboarding",
+      "rationale": "The reference set consistently reduces competing actions in early flows.",
+      "source_assets": [],
+      "source_urls": [
+        "https://mobbin.com/apps/headspace-ios-28986bf8-81b2-4af0-84df-b5654a8c98f9/f2c7edab-00b5-460c-9663-1cf64517f7db/screens"
+      ],
+      "status": "candidate",
+      "summary": "Use one dominant CTA and progressive disclosure in onboarding.",
+      "target_screens": [
+        "onboarding"
+      ],
+      "title": "Calm single-action onboarding"
+    }
+  ],
+  "project": "headspace-extended"
+}

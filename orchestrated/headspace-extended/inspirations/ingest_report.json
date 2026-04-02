@@ -1,0 +1,13 @@
+{
+  "errors": [],
+  "failure_code": null,
+  "ingested_at": "2026-04-02T09:38:05+00:00",
+  "run_id": "ec5a64568b26",
+  "scrape_root": "design_scrapped/initial",
+  "status": "completed",
+  "warnings": [],
+  "written_artifacts": [
+    "orchestrated/headspace-extended/inspirations/index.json",
+    "orchestrated/headspace-extended/inspirations/ingest_report.json"
+  ]
+}

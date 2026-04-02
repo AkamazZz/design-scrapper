@@ -1,0 +1,24 @@
+{
+  "artifacts": {
+    "brief": "contract/brief.json",
+    "ideas": "ideas/index.json",
+    "inspirations": "inspirations/index.json",
+    "plan": "realization/plan.json",
+    "preview": "preview/summary.md",
+    "screens": "screens/index.json",
+    "semantics": "contract/semantics.json",
+    "tokens": "contract/tokens.json",
+    "typography": "contract/typography.json",
+    "validation": "validation/report.json"
+  },
+  "last_run_id": "6268c5710e17",
+  "last_validation_status": "passed",
+  "output_dir": "orchestrated/headspace",
+  "platform_targets": [
+    "flutter",
+    "swiftui",
+    "compose"
+  ],
+  "project": "Headspace Mobile",
+  "project_slug": "headspace-mobile"
+}
