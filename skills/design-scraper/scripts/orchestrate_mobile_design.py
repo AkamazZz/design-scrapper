@@ -21,7 +21,7 @@ def parse_args() -> argparse.Namespace:
     run_parser.add_argument(
         "--phase",
         action="append",
-        choices=["ingest", "ideas", "proposal", "contract", "screens", "platforms", "plan", "validate"],
+        choices=["ingest", "analysis", "ideas", "proposal", "contract", "screen_briefs", "screen_variants", "critic", "screens", "platforms", "plan", "validate"],
         help="Phase to run. Repeat for multiple phases. Defaults to the full scaffold flow.",
     )
     run_parser.add_argument(
@@ -38,7 +38,7 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
-    phases = args.phase or ["ingest", "ideas", "proposal", "contract", "screens", "platforms", "plan", "validate"]
+    phases = args.phase or ["ingest", "analysis", "ideas", "proposal", "contract", "screen_briefs", "screen_variants", "critic", "screens", "platforms", "plan", "validate"]
     platforms = args.platform or list(DEFAULT_PLATFORMS)
     scrape_root = Path(args.scrape_root) if args.scrape_root else None
     report = run_pipeline(

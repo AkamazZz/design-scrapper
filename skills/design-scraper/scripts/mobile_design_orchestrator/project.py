@@ -314,6 +314,10 @@ def default_ideas(project_slug: str) -> dict[str, Any]:
             "target_screens",
             "status",
             "created_at",
+            "confidence",
+            "evidence",
+            "review_status",
+            "auto_generated",
         ],
         "ideas": [],
     }

@@ -6,7 +6,10 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any
 
+from mobile_design_orchestrator.analysis import write_analysis_artifacts
+from mobile_design_orchestrator.critic import build_scores_artifact, score_variants
 from mobile_design_orchestrator.config_loader import load_orchestrator_config
+from mobile_design_orchestrator.idea_generation import write_automated_idea_artifacts
 from mobile_design_orchestrator.project import (
     CANONICAL_COMPONENT_KINDS,
     DEFAULT_PLATFORMS,
@@ -30,6 +33,24 @@ from mobile_design_orchestrator.project import (
     validate_output_dir,
     write_json,
     write_markdown,
+)
+from mobile_design_orchestrator.review import (
+    build_review_summary_artifact,
+    infer_project_slug,
+    load_review_variants,
+    render_review_summary_markdown,
+)
+from mobile_design_orchestrator.screen_briefs import generate_screen_briefs
+from mobile_design_orchestrator.screen_variants import generate_screen_variants
+from mobile_design_orchestrator.selected_screens import publish_selected_screens
+from mobile_design_orchestrator.v2_runtime import (
+    build_artifact_version_metadata,
+    build_workspace_version_metadata,
+    empty_phase_records,
+    make_phase_fallback,
+    make_phase_winner,
+    parse_v2_phase_flags,
+    resolve_workspace_version,
 )
 
 ORCHESTRATOR_CONFIG = load_orchestrator_config()
@@ -1050,6 +1071,94 @@ def _proposal_bundle(output_dir: Path) -> dict[str, Any]:
         "flow_narrative": _required_markdown(output_dir / "proposal" / "flow_narrative.md", "proposal_missing"),
         "anti_patterns": _required_markdown(output_dir / "proposal" / "anti_patterns.md", "proposal_missing"),
         "source_rationale": _required_json(output_dir / "proposal" / "source_rationale.json", "insufficient_inputs"),
+    }
+
+
+def _write_screen_variant_index(
+    output_dir: Path,
+    *,
+    run_id: str,
+    workspace_version: str,
+    generated_at: str,
+    screen_result: dict[str, Any],
+) -> dict[str, Any]:
+    metadata = build_artifact_version_metadata(
+        phase="screen_variants",
+        run_id=run_id,
+        generated_at=generated_at,
+        workspace_version=workspace_version,
+        schema_version="2.0.0",
+    )
+    variants = [
+        {"screen_id": screen_id, "path": relative_path}
+        for screen_id in screen_result.get("screen_ids", [])
+        for relative_path in screen_result.get("variants_by_screen", {}).get(screen_id, [])
+    ]
+    payload = {
+        "schema_version": "2.0.0",
+        "generated_at": generated_at,
+        "metadata": metadata,
+        "screen_count": screen_result.get("screen_count", 0),
+        "variant_count": screen_result.get("variant_count", 0),
+        "screen_ids": list(screen_result.get("screen_ids", [])),
+        "variants": variants,
+    }
+    path = output_dir / "screen_variants" / "index.json"
+    existed = path.exists()
+    write_json(path, payload)
+    return {"path": str(path), "action": "updated" if existed else "created"}
+
+
+def _run_variant_review(
+    output_dir: Path,
+    *,
+    run_id: str,
+    workspace_version: str,
+) -> dict[str, Any]:
+    screen_variants_dir = output_dir / "screen_variants"
+    generated_at = now_iso()
+    contract_brief = load_optional_json(output_dir / "contract" / "brief.json") or {}
+    project_name = ((contract_brief.get("project") or {}).get("name")) or output_dir.name
+    project_slug = infer_project_slug(screen_variants_dir, project_name)
+    variants = load_review_variants(screen_variants_dir)
+    scores = score_variants(variants)
+    scores_artifact = build_scores_artifact(
+        scores,
+        project=project_slug,
+        source_dir=str(screen_variants_dir),
+        generated_at=generated_at,
+        run_id=run_id,
+        workspace_version=workspace_version,
+    )
+    summary_artifact = build_review_summary_artifact(
+        variants,
+        scores,
+        project=project_slug,
+        source_dir=screen_variants_dir,
+        generated_at=generated_at,
+        run_id=run_id,
+        workspace_version=workspace_version,
+    )
+    summary_markdown = render_review_summary_markdown(summary_artifact)
+
+    actions: list[dict[str, str]] = []
+    for path, payload, kind in (
+        (output_dir / "review" / "scores.json", scores_artifact, "json"),
+        (output_dir / "review" / "summary.json", summary_artifact, "json"),
+        (output_dir / "review" / "summary.md", summary_markdown, "markdown"),
+        (output_dir / "review" / "critic_report.md", summary_markdown, "markdown"),
+    ):
+        existed = path.exists()
+        if kind == "json":
+            write_json(path, payload)
+        else:
+            write_markdown(path, payload)
+        actions.append(_path_action(path, existed))
+
+    return {
+        "actions": actions,
+        "variant_count": len(variants),
+        "score_count": len(scores),
     }
 
 
@@ -2133,8 +2242,16 @@ def run_pipeline(
     run_id = new_run_id()
     started_at = now_iso()
     actions: list[dict[str, str]] = []
+    raw_v2_flags = parse_v2_phase_flags(default_enabled=False)
+    active_v2_flags = dict(raw_v2_flags)
+    for phase_name in ("analysis", "ideas", "screen_briefs", "screen_variants", "critic"):
+        if phase_name in phases:
+            active_v2_flags[phase_name] = True
+    existing_metadata = load_optional_json(output_dir / "metadata" / "index.json") or {}
+    workspace_version = resolve_workspace_version(existing_metadata.get("workspace_version"), active_v2_flags)
+    phase_records = empty_phase_records(active_v2_flags)
     ensure_dir(output_dir)
-    for relative_dir in ("inspirations", "ideas", "proposal", "contract", "screens", "platforms", "metadata", "realization", "preview", "validation"):
+    for relative_dir in ("inspirations", "analysis", "ideas", "proposal", "contract", "screen_briefs", "screen_variants", "review", "screens", "platforms", "metadata", "realization", "preview", "validation"):
         ensure_dir(output_dir / relative_dir)
 
     project_slug = slugify(project_name)
@@ -2152,13 +2269,97 @@ def run_pipeline(
             )
             actions.extend(ingest_result["actions"])
 
+        if "analysis" in phases:
+            analysis_result = write_analysis_artifacts(output_dir=output_dir, run_id=run_id, workspace_version=workspace_version)
+            actions.extend(analysis_result["actions"])
+            phase_records["analysis"] = make_phase_winner(
+                "analysis",
+                enabled=True,
+                winning_path="v2_analysis",
+                details={"record_count": analysis_result["record_count"]},
+                artifacts=analysis_result["artifacts"].values(),
+            )
+        elif (output_dir / "analysis" / "screen_manifest.json").exists():
+            phase_records["analysis"] = make_phase_winner(
+                "analysis",
+                enabled=False,
+                winning_path="existing_analysis",
+                artifacts=["analysis/screen_manifest.json"],
+            )
+        else:
+            phase_records["analysis"] = make_phase_fallback(
+                "analysis",
+                enabled=False,
+                winning_path="metadata_only",
+                reason="phase_not_requested",
+                fallback_target="metadata_only",
+            )
+
         if "ideas" in phases:
-            scaffold_json(output_dir / "ideas" / "index.json", default_ideas(project_slug), actions, force=force)
+            inspirations_path = output_dir / "inspirations" / "index.json"
+            if inspirations_path.exists():
+                ideas_result = write_automated_idea_artifacts(output_dir=output_dir, run_id=run_id, workspace_version=workspace_version)
+                actions.extend(ideas_result["actions"])
+                phase_records["ideas"] = make_phase_winner(
+                    "ideas",
+                    enabled=True,
+                    winning_path="v2_automated_ideas",
+                    details={"generated_count": ideas_result["generated_count"], "new_count": ideas_result["new_count"]},
+                    artifacts=("ideas/index.json", "ideas/auto_generated.json", "ideas/review_queue.json"),
+                )
+            else:
+                scaffold_json(output_dir / "ideas" / "index.json", default_ideas(project_slug), actions, force=force)
+                phase_records["ideas"] = make_phase_fallback(
+                    "ideas",
+                    enabled=True,
+                    winning_path="manual_ideas_only",
+                    reason="inspirations_missing",
+                    fallback_target="ideas/index.json",
+                    artifacts=("ideas/index.json",),
+                )
+        elif (output_dir / "ideas" / "index.json").exists():
+            phase_records["ideas"] = make_phase_winner(
+                "ideas",
+                enabled=False,
+                winning_path="existing_ideas",
+                artifacts=("ideas/index.json",),
+            )
+        else:
+            phase_records["ideas"] = make_phase_fallback(
+                "ideas",
+                enabled=False,
+                winning_path="manual_ideas_only",
+                reason="phase_not_requested",
+                fallback_target="ideas/index.json",
+            )
 
         inspirations = load_optional_json(output_dir / "inspirations" / "index.json")
         if "proposal" in phases:
             proposal_result = synthesize_proposal(output_dir=output_dir, project_name=project_name, force=force)
             actions.extend(proposal_result["actions"])
+            phase_records["proposal"] = make_phase_fallback(
+                "proposal",
+                enabled=False,
+                winning_path="v1_proposal_heuristics",
+                reason="v2_proposal_not_implemented",
+                fallback_target="current_proposal_logic",
+                artifacts=("proposal/design_signals.json", "proposal/direction_options.json"),
+            )
+        elif (output_dir / "proposal" / "visual_language.json").exists():
+            phase_records["proposal"] = make_phase_winner(
+                "proposal",
+                enabled=False,
+                winning_path="existing_proposal",
+                artifacts=("proposal/visual_language.json", "proposal/source_rationale.json"),
+            )
+        else:
+            phase_records["proposal"] = make_phase_fallback(
+                "proposal",
+                enabled=False,
+                winning_path="proposal_unavailable",
+                reason="phase_not_requested",
+                fallback_target="current_proposal_logic",
+            )
 
         if "contract" in phases:
             proposal_bundle = _proposal_bundle(output_dir)
@@ -2179,9 +2380,110 @@ def run_pipeline(
             scaffold_json(output_dir / "contract" / "typography.json", default_typography(proposal_bundle=proposal_bundle), actions, force=force)
             scaffold_json(output_dir / "contract" / "semantics.json", default_semantics(proposal_bundle=proposal_bundle), actions, force=force)
 
+        if "screen_briefs" in phases:
+            screen_brief_result = generate_screen_briefs(output_dir=output_dir, run_id=run_id, workspace_version=workspace_version)
+            actions.extend(screen_brief_result["actions"])
+            phase_records["screen_briefs"] = make_phase_winner(
+                "screen_briefs",
+                enabled=True,
+                winning_path="v2_screen_briefs",
+                details={"screen_count": screen_brief_result["screen_count"]},
+                artifacts=("screen_briefs/index.json", *[f"screen_briefs/{screen_id}.json" for screen_id in screen_brief_result["screen_ids"]]),
+            )
+        elif (output_dir / "screen_briefs" / "index.json").exists():
+            phase_records["screen_briefs"] = make_phase_winner(
+                "screen_briefs",
+                enabled=False,
+                winning_path="existing_screen_briefs",
+                artifacts=("screen_briefs/index.json",),
+            )
+        else:
+            phase_records["screen_briefs"] = make_phase_fallback(
+                "screen_briefs",
+                enabled=False,
+                winning_path="briefs_unavailable",
+                reason="phase_not_requested",
+                fallback_target="v1_screen_generation",
+            )
+
+        if "screen_variants" in phases:
+            variant_result = generate_screen_variants(output_dir=output_dir, run_id=run_id, workspace_version=workspace_version)
+            actions.extend(variant_result["actions"])
+            actions.append(
+                _write_screen_variant_index(
+                    output_dir,
+                    run_id=run_id,
+                    workspace_version=workspace_version,
+                    generated_at=variant_result["generated_at"],
+                    screen_result=variant_result,
+                )
+            )
+            phase_records["screen_variants"] = make_phase_winner(
+                "screen_variants",
+                enabled=True,
+                winning_path="v2_screen_variants",
+                details={"screen_count": variant_result["screen_count"], "variant_count": variant_result["variant_count"]},
+                artifacts=("screen_variants/index.json",),
+            )
+        elif (output_dir / "screen_variants" / "index.json").exists():
+            phase_records["screen_variants"] = make_phase_winner(
+                "screen_variants",
+                enabled=False,
+                winning_path="existing_screen_variants",
+                artifacts=("screen_variants/index.json",),
+            )
+        elif any((output_dir / "screen_variants").rglob("variant_*.json")):
+            phase_records["screen_variants"] = make_phase_winner(
+                "screen_variants",
+                enabled=False,
+                winning_path="existing_screen_variants",
+                artifacts=("screen_variants",),
+            )
+        else:
+            phase_records["screen_variants"] = make_phase_fallback(
+                "screen_variants",
+                enabled=False,
+                winning_path="screen_variants_unavailable",
+                reason="phase_not_requested",
+                fallback_target="v1_screen_generation",
+            )
+
+        if "critic" in phases:
+            review_result = _run_variant_review(output_dir=output_dir, run_id=run_id, workspace_version=workspace_version)
+            actions.extend(review_result["actions"])
+            phase_records["critic"] = make_phase_winner(
+                "critic",
+                enabled=True,
+                winning_path="v2_critic_review",
+                details={"variant_count": review_result["variant_count"], "score_count": review_result["score_count"]},
+                artifacts=("review/scores.json", "review/summary.md", "review/critic_report.md"),
+            )
+        elif (output_dir / "review" / "scores.json").exists():
+            phase_records["critic"] = make_phase_winner(
+                "critic",
+                enabled=False,
+                winning_path="existing_critic_review",
+                artifacts=("review/scores.json",),
+            )
+        else:
+            phase_records["critic"] = make_phase_fallback(
+                "critic",
+                enabled=False,
+                winning_path="critic_unavailable",
+                reason="phase_not_requested",
+                fallback_target="publish_best_available_generator_output",
+            )
+
         if "screens" in phases:
-            screen_result = synthesize_screens(output_dir=output_dir, force=force)
-            actions.extend(screen_result["actions"])
+            variant_index_exists = (output_dir / "screen_variants" / "index.json").exists() or any((output_dir / "screen_variants").rglob("variant_*.json"))
+            if variant_index_exists:
+                baseline_screen_result = synthesize_screens(output_dir=output_dir, force=True)
+                actions.extend(baseline_screen_result["actions"])
+                selected_screen_result = publish_selected_screens(output_dir=output_dir, run_id=run_id, workspace_version=workspace_version)
+                actions.extend(selected_screen_result["actions"])
+            else:
+                screen_result = synthesize_screens(output_dir=output_dir, force=force)
+                actions.extend(screen_result["actions"])
 
         if "platforms" in phases:
             mapping_result = emit_platform_mappings(output_dir=output_dir, platforms=platforms)
@@ -2244,6 +2546,13 @@ def run_pipeline(
         "scrape_root": str(scrape_root) if scrape_root else None,
         "actions": actions,
         "validation_status": validation_report["status"] if validation_report else None,
+        "workspace_version": workspace_version,
+        "v2": build_workspace_version_metadata(
+            workspace_version=workspace_version,
+            flags=active_v2_flags,
+            phase_records=phase_records,
+            producer_versions={"design-scraper-v2": "0.1.0"},
+        ),
     }
     write_json(output_dir / "metadata" / f"orchestrator_run_{run_id}.json", run_report)
     write_json(
@@ -2252,12 +2561,36 @@ def run_pipeline(
             "project": project_name,
             "project_slug": project_slug,
             "output_dir": str(output_dir),
+            "workspace_version": workspace_version,
             "last_run_id": run_id,
             "platform_targets": platforms,
             "last_validation_status": validation_report["status"] if validation_report else None,
+            "v2": build_workspace_version_metadata(
+                workspace_version=workspace_version,
+                flags=active_v2_flags,
+                phase_records=phase_records,
+                producer_versions={"design-scraper-v2": "0.1.0"},
+            ),
             "artifacts": {
                 "inspirations": "inspirations/index.json",
-                "ideas": "ideas/index.json",
+                "analysis": {
+                    "screen_manifest": "analysis/screen_manifest.json",
+                    "ocr": "analysis/ocr.json",
+                    "layout_regions": "analysis/layout_regions.json",
+                    "component_tags": "analysis/component_tags.json",
+                    "screen_embeddings": "analysis/screen_embeddings.json",
+                },
+                "ideas": {
+                    "index": "ideas/index.json",
+                    "auto_generated": "ideas/auto_generated.json",
+                    "review_queue": "ideas/review_queue.json",
+                },
+                "screen_briefs": {
+                    "index": "screen_briefs/index.json",
+                },
+                "screen_variants": {
+                    "index": "screen_variants/index.json",
+                },
                 "proposal": {
                     "design_direction": "proposal/design_direction.md",
                     "design_signals": "proposal/design_signals.json",
@@ -2275,6 +2608,11 @@ def run_pipeline(
                 "tokens": "contract/tokens.json",
                 "typography": "contract/typography.json",
                 "semantics": "contract/semantics.json",
+                "review": {
+                    "scores": "review/scores.json",
+                    "summary": "review/summary.md",
+                    "critic_report": "review/critic_report.md",
+                },
                 "screens": "screens/index.json",
                 "platforms": [f"platforms/{platform}.json" for platform in platforms],
                 "plan": "realization/plan.json",
